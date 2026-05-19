@@ -31,9 +31,12 @@ const e2ePlan = readJsonIfPresent(path.join(proofDir, 'end-to-end-run-plan.lates
 const e2eLive = readJsonIfPresent(path.join(proofDir, 'end-to-end-live-run.latest.json'));
 const sapIdentity = readJsonIfPresent(path.join(proofDir, 'sap-identity-status.latest.json'));
 const release = readJsonIfPresent(path.join(proofDir, 'public-release-check.latest.json'));
+const demoVideo = readJsonIfPresent(path.join(proofDir, 'oobe-ace-demo-video.latest.json'));
 const publicSummary = readJsonIfPresent(path.join(root, '.public-export', 'pablito-settlement-sentinel', 'PUBLIC_EXPORT_SUMMARY.json'))
   || readJsonIfPresent(path.join(root, 'PUBLIC_EXPORT_SUMMARY.json'));
 const xPostUrl = process.env.X_POST_URL || '';
+const repositoryUrl = process.env.PUBLIC_REPOSITORY_URL || publicSummary?.repositoryUrl || '';
+const repositoryCommit = process.env.PUBLIC_REPOSITORY_COMMIT || publicSummary?.repositoryCommit || '';
 
 const aceServices = settlement?.aceServiceUsage?.distinctServiceIds || [];
 const tx = settlement?.aceX402Payment?.transaction || 'pending';
@@ -140,6 +143,13 @@ const html = `<!doctype html>
       ${timeline.map(([num, title, body]) => `<div class="step"><span class="num">${num}</span><div class="label">${escapeHtml(title)}</div><div>${escapeHtml(body)}</div></div>`).join('\n      ')}
     </div>
 
+    ${demoVideo?.video?.file ? `<h2>Short Demo Video</h2>
+    <video controls preload="metadata" poster="/oobe-ace/oobe-ace-demo-poster.png" style="width:100%;max-width:900px;border:1px solid var(--line);border-radius:8px;background:#000;">
+      <source src="/oobe-ace/oobe-ace-demo.mp4" type="video/mp4">
+      <a href="/oobe-ace/oobe-ace-demo.mp4">Download the demo video</a>
+    </video>
+    <p>Public-safe reviewer walkthrough generated from the proof artifacts. SHA-256: <code>${escapeHtml(demoVideo.video.sha256 || 'pending')}</code></p>` : ''}
+
     <h2>Proof Map</h2>
     <table class="proof-table">
       <thead><tr><th>Requirement</th><th>Status</th><th>Evidence</th></tr></thead>
@@ -152,9 +162,9 @@ const html = `<!doctype html>
     <ul>
       <li><a href="/oobe-ace/pablito-settlement-sentinel.metadata.json">Agent metadata JSON</a></li>
       <li><a href="/.well-known/x402/pablito-settlement-sentinel.json">x402 resource JSON</a></li>
-      ${publicSummary?.repositoryUrl ? `<li><a href="${escapeHtml(publicSummary.repositoryUrl)}">Public GitHub repository</a></li>` : ''}
+      ${repositoryUrl ? `<li><a href="${escapeHtml(repositoryUrl)}">Public GitHub repository</a></li>` : ''}
       ${xPostUrl ? `<li><a href="${escapeHtml(xPostUrl)}">X walkthrough post</a></li>` : ''}
-      ${publicSummary?.repositoryCommit ? `<li>Repository commit: <code>${escapeHtml(publicSummary.repositoryCommit)}</code></li>` : ''}
+      ${repositoryCommit ? `<li>Repository commit: <code>${escapeHtml(repositoryCommit)}</code></li>` : ''}
       ${e2eLive?.deliverable?.sha256 ? `<li>Atomic deliverable SHA-256: <code>${escapeHtml(e2eLive.deliverable.sha256)}</code></li>` : ''}
       ${e2eLive?.deliverable?.file ? `<li><a href="/oobe-ace/deliverables/${escapeHtml(path.basename(e2eLive.deliverable.file))}">Atomic run deliverable JSON</a></li>` : ''}
     </ul>

@@ -45,6 +45,7 @@ const releaseCheck = readJsonIfPresent(path.join(proofDir, 'public-release-check
 const settlementBundle = readJsonIfPresent(path.join(proofDir, 'settlement-evidence-bundle.latest.json'));
 const sapIdentity = readJsonIfPresent(path.join(proofDir, 'sap-identity-status.latest.json'));
 const e2eLive = readJsonIfPresent(path.join(proofDir, 'end-to-end-live-run.latest.json'));
+const demoVideo = readJsonIfPresent(path.join(proofDir, 'oobe-ace-demo-video.latest.json'));
 const publicSummary = readJsonIfPresent(path.join(root, '.public-export', 'pablito-settlement-sentinel', 'PUBLIC_EXPORT_SUMMARY.json'))
   || readJsonIfPresent(path.join(root, 'PUBLIC_EXPORT_SUMMARY.json'));
 const sapGate = readJsonIfPresent(path.join(proofDir, 'sap-live-gate.latest.json'));
@@ -57,7 +58,9 @@ const acePaymentBundled = settlementBundle?.status === 'partial-live-ace-x402-ev
 const aceOnChainProofCount = settlementBundle?.aceX402Payments?.onChainProofCount || 0;
 const publicExportRedFlagFree = releaseCheck?.redFlagCount === 0;
 const publicRepoStaged = fileExists('.public-export/pablito-settlement-sentinel/PUBLIC_EXPORT_SUMMARY.json');
-const publicRepoPublished = Boolean(publicSummary?.repositoryUrl);
+const publicRepositoryUrl = process.env.PUBLIC_REPOSITORY_URL || publicSummary?.repositoryUrl || '';
+const publicRepositoryCommit = process.env.PUBLIC_REPOSITORY_COMMIT || publicSummary?.repositoryCommit || '';
+const publicRepoPublished = Boolean(publicRepositoryUrl);
 const categoryDecisionExists = fileExists('proof/category-route-decision.md');
 const sapRegistered = ['registered-live-identity-found', 'sap-identity-visible-in-explorer'].includes(sapIdentity?.status);
 const atomicRunCaptured = e2eLive?.ok === true;
@@ -73,7 +76,7 @@ const commonRequirements = {
   publicGithubRepository: status(
     publicRepoPublished ? 'published' : publicExportRedFlagFree && publicRepoStaged ? 'staged-not-published' : 'not-ready',
     publicRepoPublished
-      ? `Public repository is live: ${publicSummary.repositoryUrl}; commit: ${publicSummary.repositoryCommit || 'unknown'}.`
+      ? `Public repository is live: ${publicRepositoryUrl}; commit: ${publicRepositoryCommit || 'unknown'}.`
       : publicExportRedFlagFree
       ? `Public export is staged with ${releaseCheck.redFlagCount} red flags and ${releaseCheck.placeholderFileCount} placeholder file(s).`
       : 'Public export/release check is missing or not clean.',
@@ -87,9 +90,11 @@ const commonRequirements = {
     xPostPublished ? 'Use the X post URL in the Superteam submission.' : 'After public repo exists, approve and post walkthrough tagging @OOBEonSol and @AceDataCloud.',
   ),
   demoWalkthrough: status(
-    'draft-ready-needs-public-link',
-    fileExists('public/oobe-ace-proof.html') ? 'HTML proof page and X walkthrough draft exist in staged export.' : 'No staged demo/walkthrough artifact found.',
-    'Publish repo and use the X thread/video/walkthrough to show discovery, service use, execution, payment, and autonomy.',
+    demoVideo?.ok ? 'video-and-walkthrough-ready' : 'draft-ready-needs-public-link',
+    demoVideo?.ok
+      ? `Short demo video exists: ${demoVideo.video?.publicUrl || 'public/oobe-ace-demo.mp4'}; proof page and X walkthrough are linked.`
+      : fileExists('public/oobe-ace-proof.html') ? 'HTML proof page and X walkthrough draft exist in staged export.' : 'No staged demo/walkthrough artifact found.',
+    demoVideo?.ok ? 'Use proof page, video URL, and X post URL in Superteam submission.' : 'Publish repo and use the X thread/video/walkthrough to show discovery, service use, execution, payment, and autonomy.',
   ),
   categoryDeclared: status(
     categoryDecisionExists ? 'recommended-not-final' : 'missing',

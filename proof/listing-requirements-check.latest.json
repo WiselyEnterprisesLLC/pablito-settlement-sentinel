@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T23:07:04.096Z",
+  "generatedAt": "2026-05-19T23:20:31.063Z",
   "listing": {
     "id": "66842d34-5ed4-474f-9844-dbbcfcad7ad3",
     "title": "Autonomous Agent Bounty: OOBE × Ace Data Cloud",
@@ -30,7 +30,7 @@
     "publicGithubRepository": {
       "status": "published",
       "required": true,
-      "evidence": "Public repository is live: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel; commit: 35e9d00c325c498d743ac2d82b1ce02962b546dd.",
+      "evidence": "Public repository is live: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel; commit: 37c6750885e18d773a354351fb9e4316f5165297.",
       "nextAction": "Use repo URL/commit in X walkthrough and Superteam submission."
     },
     "xSubmissionPost": {
@@ -40,10 +40,10 @@
       "nextAction": "Use the X post URL in the Superteam submission."
     },
     "demoWalkthrough": {
-      "status": "draft-ready-needs-public-link",
+      "status": "video-and-walkthrough-ready",
       "required": true,
-      "evidence": "HTML proof page and X walkthrough draft exist in staged export.",
-      "nextAction": "Publish repo and use the X thread/video/walkthrough to show discovery, service use, execution, payment, and autonomy."
+      "evidence": "Short demo video exists: https://wiselyenterprisesllc.com/oobe-ace/oobe-ace-demo.mp4; proof page and X walkthrough are linked.",
+      "nextAction": "Use proof page, video URL, and X post URL in Superteam submission."
     },
     "categoryDeclared": {
       "status": "recommended-not-final",
@@ -118,10 +118,10 @@
   },
   "submissionPackage": {
     "xPostMustIncludeShortDemo": {
-      "status": "draft-ready-needs-public-link",
+      "status": "video-and-walkthrough-ready",
       "required": true,
-      "evidence": "HTML proof page and X walkthrough draft exist in staged export.",
-      "nextAction": "Publish repo and use the X thread/video/walkthrough to show discovery, service use, execution, payment, and autonomy."
+      "evidence": "Short demo video exists: https://wiselyenterprisesllc.com/oobe-ace/oobe-ace-demo.mp4; proof page and X walkthrough are linked.",
+      "nextAction": "Use proof page, video URL, and X post URL in Superteam submission."
     },
     "xPostMustTagOobeAndAce": {
       "status": "draft-ready-not-posted",
@@ -144,7 +144,7 @@
     "xPostMustShareGithubRepo": {
       "status": "published",
       "required": true,
-      "evidence": "Public repository is live: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel; commit: 35e9d00c325c498d743ac2d82b1ce02962b546dd.",
+      "evidence": "Public repository is live: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel; commit: 37c6750885e18d773a354351fb9e4316f5165297.",
       "nextAction": "Use repo URL/commit in X walkthrough and Superteam submission."
     }
   },

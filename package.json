@@ -32,6 +32,7 @@
     "proof:p0-live-brief": "node src/write-p0-live-action-brief.mjs",
     "proof:live-rehearsal": "node src/write-live-rehearsal.mjs",
     "proof:public-release-check": "node src/write-public-release-check.mjs",
+    "artifact:demo-video": "python3 src/write-demo-video.py",
     "proof:finalization": "node src/write-finalization-dashboard.mjs",
     "proof:public-export-manifest": "node src/write-public-export-manifest.mjs",
     "artifact:proof-page": "node src/write-proof-page.mjs",

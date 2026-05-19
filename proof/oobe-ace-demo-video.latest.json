@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-05-19T23:20:30Z",
+  "status": "captured-public-demo-video",
+  "ok": true,
+  "video": {
+    "file": "public/oobe-ace-demo.mp4",
+    "publicUrl": "https://wiselyenterprisesllc.com/oobe-ace/oobe-ace-demo.mp4",
+    "poster": "public/oobe-ace-demo-poster.png",
+    "sha256": "dfa87fc2c22aef0d8a8be3b69325e0063e65c9c6f6cba411b2110af85eb116db",
+    "durationSeconds": 26
+  },
+  "evidenceIncluded": {
+    "requestId": "oobe-ace-live-run-20260519T221510Z",
+    "sapRegistrationTransaction": "33mbTuPhn31CXNC1XAViiCHFqXZFohiUGr8uzhXrHSSkEhKdwDidV65NHEo6uCod1fa7nLgmqw557bHRgzLU9jxN",
+    "aceDistinctServiceCount": 15,
+    "x402BaseProofCount": 3,
+    "deliverableSha256": "22e9860b0674eae24b68f746d68f851dfbf288aa620b1460f1885800b72a9e73",
+    "xPostUrl": "https://x.com/Pablito_WE/status/2056873797232591067",
+    "repositoryUrl": "https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel"
+  },
+  "safety": {
+    "containsPrivateData": false,
+    "containsSecrets": false,
+    "usesPersonalFiatFunding": false,
+    "claimsRewardWon": false,
+    "syntheticDemo": false
+  },
+  "notes": [
+    "Video is generated from local public-safe proof artifacts.",
+    "Existing Ace video-generation proofs are cited as service evidence; this reviewer walkthrough itself is rendered locally for accuracy."
+  ]
+}

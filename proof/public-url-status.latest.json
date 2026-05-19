@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T23:07:05.498Z",
+  "generatedAt": "2026-05-19T23:20:32.348Z",
   "status": "all-public-urls-readable",
   "safety": {
     "readOnly": true,
@@ -18,7 +18,7 @@
       "contentType": "application/json",
       "bytes": 2687,
       "sha256": "47067abe162c855f99c0efeb88dac1b78d833bcb4b7800fd7f220469c2e616ef",
-      "latencyMs": 113,
+      "latencyMs": 92,
       "jsonSummary": {
         "type": "object",
         "topLevelKeys": [
@@ -43,7 +43,7 @@
       "contentType": "application/json",
       "bytes": 1691,
       "sha256": "ef690a16b6c2d6e9a3b0d0709d7d197ab5bfae63f27d7434bde60112a6f3cbc0",
-      "latencyMs": 12,
+      "latencyMs": 11,
       "jsonSummary": {
         "type": "object",
         "topLevelKeys": [
@@ -66,9 +66,9 @@
       "ok": true,
       "httpStatus": 200,
       "contentType": "text/html",
-      "bytes": 7801,
-      "sha256": "24567f6ee3f913a344a7b27f1b9e6f16763516fd2cbea08d087ba42deeb0706f",
-      "latencyMs": 7,
+      "bytes": 8333,
+      "sha256": "749ee1dbe88f935f5e4384bb75793db3debd9ce395817b7b98c8b829514a4b08",
+      "latencyMs": 8,
       "jsonSummary": null,
       "jsonError": null,
       "expectedTextPresent": true,
@@ -80,8 +80,8 @@
       "ok": true,
       "httpStatus": 200,
       "contentType": "text/html",
-      "bytes": 7801,
-      "sha256": "24567f6ee3f913a344a7b27f1b9e6f16763516fd2cbea08d087ba42deeb0706f",
+      "bytes": 8333,
+      "sha256": "749ee1dbe88f935f5e4384bb75793db3debd9ce395817b7b98c8b829514a4b08",
       "latencyMs": 4,
       "jsonSummary": null,
       "jsonError": null,

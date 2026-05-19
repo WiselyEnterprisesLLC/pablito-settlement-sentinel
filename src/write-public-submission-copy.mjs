@@ -20,15 +20,17 @@ const scorecard = readJsonIfPresent(path.join(proofDir, 'competitive-scorecard.l
 const settlement = readJsonIfPresent(path.join(proofDir, 'settlement-evidence-bundle.latest.json'));
 const sapIdentity = readJsonIfPresent(path.join(proofDir, 'sap-identity-status.latest.json'));
 const e2eLive = readJsonIfPresent(path.join(proofDir, 'end-to-end-live-run.latest.json'));
+const demoVideo = readJsonIfPresent(path.join(proofDir, 'oobe-ace-demo-video.latest.json'));
 const publicSummary = readJsonIfPresent(path.join(root, '.public-export', 'pablito-settlement-sentinel', 'PUBLIC_EXPORT_SUMMARY.json'))
   || readJsonIfPresent(path.join(root, 'PUBLIC_EXPORT_SUMMARY.json'));
 const aceServices = settlement?.aceServiceUsage?.distinctServiceIds || [];
 const tx = settlement?.aceX402Payment?.transaction || 'pending';
 const sapTx = sapIdentity?.liveRegistration?.signature || 'pending';
 const atomicRequestId = e2eLive?.requestId || 'pending';
-const repoUrl = publicSummary?.repositoryUrl || 'pending public URL';
-const commitHash = publicSummary?.repositoryCommit || 'pending commit hash';
+const repoUrl = process.env.PUBLIC_REPOSITORY_URL || publicSummary?.repositoryUrl || 'pending public URL';
+const commitHash = process.env.PUBLIC_REPOSITORY_COMMIT || publicSummary?.repositoryCommit || 'pending commit hash';
 const proofPageUrl = 'https://wiselyenterprisesllc.com/oobe-ace/proof';
+const demoVideoUrl = demoVideo?.video?.publicUrl || 'https://wiselyenterprisesllc.com/oobe-ace/oobe-ace-demo.mp4';
 const xPostUrl = process.env.X_POST_URL || 'pending approved X or video URL';
 const xPostPublished = /^https:\/\/x\.com\/Pablito_WE\/status\/\d+$/i.test(xPostUrl);
 
@@ -144,6 +146,7 @@ Current competitive readiness score: ${scorecard?.score?.percent ?? 'pending'}%.
 - SAP registration evidence: ${sapTx}
 - Atomic live-run evidence: ${atomicRequestId}
 - Demo/walkthrough: ${xPostUrl}
+- Short demo video: ${demoVideoUrl}
 
 ## Safe Claim Language
 

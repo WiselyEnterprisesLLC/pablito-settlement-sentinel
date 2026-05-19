@@ -42,7 +42,7 @@ Current competitive readiness score: 70%.
 ## Evidence Links To Fill After Publication
 
 - Repository: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel
-- Commit: 35e9d00c325c498d743ac2d82b1ce02962b546dd
+- Commit: 37c6750885e18d773a354351fb9e4316f5165297
 - Public proof page: https://wiselyenterprisesllc.com/oobe-ace/proof
 - Public export summary: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel/blob/main/PUBLIC_EXPORT_SUMMARY.json
 - Reviewer index: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel/blob/main/proof/reviewer-index.md
@@ -53,6 +53,7 @@ Current competitive readiness score: 70%.
 - SAP registration evidence: 33mbTuPhn31CXNC1XAViiCHFqXZFohiUGr8uzhXrHSSkEhKdwDidV65NHEo6uCod1fa7nLgmqw557bHRgzLU9jxN
 - Atomic live-run evidence: oobe-ace-live-run-20260519T221510Z
 - Demo/walkthrough: https://x.com/Pablito_WE/status/2056873797232591067
+- Short demo video: https://wiselyenterprisesllc.com/oobe-ace/oobe-ace-demo.mp4
 
 ## Safe Claim Language
 
