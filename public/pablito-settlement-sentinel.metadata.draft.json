@@ -1,0 +1,70 @@
+{
+  "status": "draft-only-not-live",
+  "warning": "Public-safe metadata draft only. This is not SAP mainnet registration evidence and not a completed bounty submission.",
+  "generatedAt": "2026-05-19T22:25:50.189Z",
+  "agent": {
+    "name": "Pablito Settlement Sentinel",
+    "description": "Autonomous workflow sentinel: discovers workflow-analysis tools, executes a bounded AI classification task, and produces x402/SAP settlement proof. Demo-safe; no private data.",
+    "agentId": "did:sap:pablito-settlement-sentinel",
+    "candidateWallet": "HE9MYDzoLAgnwbRXbiWRGGvoE2QE9LqKdQGJhNLPxtVj",
+    "network": "solana:mainnet-beta",
+    "protocols": [
+      "SAP",
+      "x402"
+    ],
+    "capabilities": [
+      {
+        "id": "workflow:classify",
+        "protocolId": "sap",
+        "version": "0.1.0",
+        "description": "Classify a small business workflow bottleneck and return one automation-ready next step."
+      },
+      {
+        "id": "x402:settlement-proof",
+        "protocolId": "x402",
+        "version": "0.1.0",
+        "description": "Create a public-safe settlement proof object for a completed agent workflow."
+      }
+    ],
+    "pricing": [
+      {
+        "tierId": "demo",
+        "pricePerCall": 1000,
+        "rateLimit": 60,
+        "tokenType": "sol",
+        "settlementMode": "x402"
+      }
+    ]
+  },
+  "endpoints": {
+    "agentUri": "https://wiselyenterprisesllc.com/oobe-ace/pablito-settlement-sentinel.metadata.json",
+    "x402Endpoint": "https://wiselyenterprisesllc.com/.well-known/x402/pablito-settlement-sentinel.json",
+    "note": "These URLs can be publicly hosted as static proof metadata. They are not proof of SAP mainnet registration by themselves."
+  },
+  "proofBoundary": {
+    "dryRunProof": "proof/dry-run-proof.latest.json",
+    "liveEvidence": {
+      "status": "captured-live-ace-x402-payment",
+      "orderState": "Finished",
+      "payWay": "X402",
+      "payer": "0x122c67ad0DD3bA27bfCaCcCD9aFd9c3fd99216Fa",
+      "network": "base",
+      "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "amountAtomic": "950000",
+      "transaction": "0x456b10aaec7e5242c3210dc8d190c388547395629f27224b19a31b0cb73329f0",
+      "proofFile": "proof/ace-x402-live-payment.latest.json",
+      "orderApiEvidenceFile": "proof/ace-order-evidence.latest.json",
+      "orderApiEvidenceStatus": "captured-ace-order-api-evidence",
+      "orderApiEvidenceHttpStatus": 500
+    },
+    "superteamSubmission": null,
+    "xWalkthrough": null
+  },
+  "publicSafety": {
+    "containsSecrets": false,
+    "containsPrivateData": false,
+    "claimsLiveRegistration": false,
+    "claimsPaymentSettlement": true,
+    "claimsBountyCompletion": false
+  }
+}

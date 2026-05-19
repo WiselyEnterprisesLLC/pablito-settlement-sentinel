@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-05-19T07:43:56.430Z",
+  "status": "completed-ace-service-proof-run",
+  "allHosted": false,
+  "attempted": 1,
+  "okCount": 1,
+  "failedCount": 0,
+  "skippedUnsafeFamilies": [
+    "captcha",
+    "identity",
+    "proxy"
+  ],
+  "results": [
+    {
+      "ok": true,
+      "status": "captured-ace-api-service-proof",
+      "serviceId": "short-url",
+      "serviceLabel": "Short URL",
+      "family": "web-data",
+      "httpStatus": 200,
+      "elapsedMs": 881,
+      "archive": "proof/ace-service-proof.short-url.20260519T074356428Z.json"
+    }
+  ]
+}

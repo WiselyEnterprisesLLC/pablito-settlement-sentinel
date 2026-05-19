@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-05-19T07:15:04.283Z",
+  "status": "captured-ace-api-service-proof",
+  "serviceId": "sora-video-generation",
+  "safety": {
+    "storesApiToken": false,
+    "storesRawResponse": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "publishesPublicly": false,
+    "unsafeFamiliesSkipped": [
+      "captcha",
+      "identity",
+      "proxy"
+    ]
+  },
+  "notes": [
+    "API token was provided through environment/stdin wrapper only.",
+    "Stored proof is a public-safe summary, not the raw provider response.",
+    "This proves service execution only if httpStatus is 2xx and ok is true."
+  ],
+  "ok": false,
+  "httpStatus": 500,
+  "serviceLabel": "Sora Video Generation",
+  "family": "ai-video",
+  "docs": "https://docs.acedata.cloud/en/mcp/sora",
+  "endpoint": "https://api.acedata.cloud/sora/videos",
+  "elapsedMs": 5505,
+  "requestShape": {
+    "method": "POST",
+    "bodyKeys": [
+      "duration",
+      "model",
+      "prompt",
+      "size",
+      "version"
+    ],
+    "model": "sora-2"
+  },
+  "responseSummary": {
+    "topLevelKeys": [
+      "error",
+      "success",
+      "task_id",
+      "trace_id"
+    ],
+    "id": null,
+    "model": null,
+    "usage": null,
+    "mediaUrls": [],
+    "preview": "{\"success\":false,\"error\":{\"code\":\"api_error\",\"message\":\"unexpected error Interface Not Found, please contact admin\"},\"trace_id\":\"801979c7-05b6-4e59-8693-b0e487295921\",\"task_id\":\"669cbe05-8964-4ada-a7c1-d995d9bda319\"}"
+  }
+}

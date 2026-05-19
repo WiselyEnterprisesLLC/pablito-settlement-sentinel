@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-05-19T07:14:58.777Z",
+  "status": "captured-ace-api-service-proof",
+  "serviceId": "nano-banana-image-generation",
+  "safety": {
+    "storesApiToken": false,
+    "storesRawResponse": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "publishesPublicly": false,
+    "unsafeFamiliesSkipped": [
+      "captcha",
+      "identity",
+      "proxy"
+    ]
+  },
+  "notes": [
+    "API token was provided through environment/stdin wrapper only.",
+    "Stored proof is a public-safe summary, not the raw provider response.",
+    "This proves service execution only if httpStatus is 2xx and ok is true."
+  ],
+  "ok": true,
+  "httpStatus": 200,
+  "serviceLabel": "Nano Banana Image Generation",
+  "family": "ai-image",
+  "docs": "https://docs.acedata.cloud/en/mcp/nanobanana",
+  "endpoint": "https://api.acedata.cloud/nano-banana/images",
+  "elapsedMs": 208992,
+  "requestShape": {
+    "method": "POST",
+    "bodyKeys": [
+      "action",
+      "model",
+      "prompt"
+    ],
+    "model": "nano-banana"
+  },
+  "responseSummary": {
+    "topLevelKeys": [
+      "data",
+      "success",
+      "task_id",
+      "trace_id"
+    ],
+    "id": null,
+    "model": null,
+    "usage": null,
+    "mediaUrls": [
+      "https://platform.cdn.acedata.cloud/nanobanana/495b7bd5-e94a-44f2-bbf2-277f1e2b28c3.png"
+    ],
+    "dataCount": 1,
+    "dataPreview": [
+      {
+        "image_url": "https://platform.cdn.acedata.cloud/nanobanana/495b7bd5-e94a-44f2-bbf2-277f1e2b28c3.png",
+        "prompt": "A small business workflow before and after automation."
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-05-19T22:25:54.573Z",
+  "status": "blocked-missing-ace-token-or-order",
+  "safety": {
+    "createsAccount": false,
+    "signsPayment": false,
+    "sendsPayment": false,
+    "spendsFunds": false,
+    "storesPlatformToken": false,
+    "storesSignerSecret": false,
+    "publishesPublicly": false
+  },
+  "source": {
+    "docs": "https://docs.acedata.cloud/en/guides/x402",
+    "apiBase": "https://platform.acedata.cloud",
+    "endpointShape": "POST /api/v1/orders/{order_id}/pay/ with { \"pay_way\": \"X402\" }"
+  },
+  "notes": [
+    "This command is safe to run now, but it needs an Ace Platform Token and an existing order id to capture a real 402 requirement.",
+    "It intentionally does not sign, pay, or store the token."
+  ],
+  "ok": false,
+  "missing": [
+    "ACE_PLATFORM_TOKEN",
+    "ACE_X402_ORDER_ID"
+  ],
+  "nextAccountSteps": [
+    "Create/login Ace Data Cloud account at https://platform.acedata.cloud.",
+    "Create a Platform Token at https://platform.acedata.cloud/console/platform-tokens.",
+    "Create or identify a low-cost order for one real Ace service call.",
+    "Run this command with ACE_PLATFORM_TOKEN and ACE_X402_ORDER_ID in the environment only."
+  ],
+  "preservedLatestPreview": null
+}

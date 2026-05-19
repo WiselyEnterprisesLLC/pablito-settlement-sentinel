@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-05-19T06:42:13.542Z",
+  "status": "captured-ace-api-service-proof",
+  "serviceId": "openai-chat-completions",
+  "safety": {
+    "storesApiToken": false,
+    "storesRawResponse": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "publishesPublicly": false,
+    "unsafeFamiliesSkipped": [
+      "captcha",
+      "identity",
+      "proxy"
+    ]
+  },
+  "notes": [
+    "API token was provided through environment/stdin wrapper only.",
+    "Stored proof is a public-safe summary, not the raw provider response.",
+    "This proves service execution only if httpStatus is 2xx and ok is true."
+  ],
+  "ok": true,
+  "httpStatus": 200,
+  "serviceLabel": "OpenAI Chat Completions",
+  "family": "ai-chat",
+  "docs": "https://docs.acedata.cloud/en/guides/openai/openai_chat_completions",
+  "endpoint": "https://api.acedata.cloud/openai/chat/completions",
+  "elapsedMs": 4493,
+  "requestShape": {
+    "method": "POST",
+    "bodyKeys": [
+      "messages",
+      "model"
+    ],
+    "model": "gpt-5.2"
+  },
+  "responseSummary": {
+    "topLevelKeys": [
+      "choices",
+      "created",
+      "id",
+      "model",
+      "object",
+      "usage"
+    ],
+    "id": "chatcmpl-f55020df-ea5e-4dcf-ac0d-e388e158f70d",
+    "model": "gpt-5.2",
+    "usage": {
+      "prompt_tokens": 14,
+      "completion_tokens": 138,
+      "total_tokens": 152
+    },
+    "choices": [
+      {
+        "index": 0,
+        "finish_reason": "stop",
+        "content": "I can summarize it, but I need the workflow details first.\n\nPlease paste or upload one of the following:\n- A description of the workflow and where it slows down\n- A screenshot/diagram of the workflow\n- Logs/metrics (cycle time per step, queue times, handoffs)\n\nIf you share it, I’ll return a concise summary like:\n- **Where the bottleneck occurs**\n- **What’s backing up (inputs/queues)**\n- **Likely root cause (capacity, rework, dependencies, approvals, tooling)**\n- **Impact (lead time, throughput, error rate)**\n- **1–3 highest-leverage fixes**"
+      }
+    ]
+  }
+}

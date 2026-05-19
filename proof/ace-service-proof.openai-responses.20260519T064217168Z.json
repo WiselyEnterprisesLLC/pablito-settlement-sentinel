@@ -1,0 +1,90 @@
+{
+  "generatedAt": "2026-05-19T06:42:17.168Z",
+  "status": "captured-ace-api-service-proof",
+  "serviceId": "openai-responses",
+  "safety": {
+    "storesApiToken": false,
+    "storesRawResponse": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "publishesPublicly": false,
+    "unsafeFamiliesSkipped": [
+      "captcha",
+      "identity",
+      "proxy"
+    ]
+  },
+  "notes": [
+    "API token was provided through environment/stdin wrapper only.",
+    "Stored proof is a public-safe summary, not the raw provider response.",
+    "This proves service execution only if httpStatus is 2xx and ok is true."
+  ],
+  "ok": true,
+  "httpStatus": 200,
+  "serviceLabel": "OpenAI Responses",
+  "family": "ai-chat",
+  "docs": "https://docs.acedata.cloud/en/guides/openai/openai_responses",
+  "endpoint": "https://api.acedata.cloud/openai/responses",
+  "elapsedMs": 3623,
+  "requestShape": {
+    "method": "POST",
+    "bodyKeys": [
+      "input",
+      "model"
+    ],
+    "model": "gpt-5.2"
+  },
+  "responseSummary": {
+    "topLevelKeys": [
+      "background",
+      "completed_at",
+      "created_at",
+      "error",
+      "frequency_penalty",
+      "id",
+      "incomplete_details",
+      "instructions",
+      "max_output_tokens",
+      "max_tool_calls",
+      "metadata",
+      "model",
+      "moderation",
+      "object",
+      "output",
+      "parallel_tool_calls",
+      "presence_penalty",
+      "previous_response_id",
+      "prompt_cache_key",
+      "prompt_cache_retention",
+      "reasoning",
+      "safety_identifier",
+      "service_tier",
+      "status",
+      "store",
+      "temperature",
+      "text",
+      "tool_choice",
+      "tool_usage",
+      "tools",
+      "top_logprobs",
+      "top_p",
+      "truncation",
+      "usage",
+      "user"
+    ],
+    "id": "resp_00f6e8e745bb4a5e016a0c0646c5988198a87c12ac0bafbe61",
+    "model": "gpt-5.2",
+    "usage": {
+      "input_tokens": 14,
+      "input_tokens_details": {
+        "cached_tokens": 0
+      },
+      "output_tokens": 104,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 118
+    },
+    "preview": "{\"background\":false,\"completed_at\":1779172936,\"created_at\":1779172934,\"error\":null,\"frequency_penalty\":0,\"id\":\"resp_00f6e8e745bb4a5e016a0c0646c5988198a87c12ac0bafbe61\",\"incomplete_details\":null,\"instructions\":null,\"max_output_tokens\":null,\"max_tool_calls\":null,\"metadata\":{},\"model\":\"gpt-5.2\",\"moderation\":null,\"object\":\"response\",\"output\":[{\"content\":[{\"annotations\":[],\"logprobs\":[],\"text\":\"Paste the operations note here (or upload an image of it), and tell me the format you want:\\n\\n- **Simple checklist** (unchecked boxes)\\n- **SOP-style** (grouped by phase: Prep / Execute / Verify / Closeout)\\n- **Runbook** (includes owners, timing, links, rollback)\\n\\nAlso let me know if you want:\\n- **“Do / Verify”** pairs for each step\\n- Fields like **Owner, Due time, Status, Notes**\",\"type\":\"output_text\"}],\"id\":\"msg_00f6e8e745bb4a5e016a0c064716888198938c7571711daabd\",\"role\":\"assistant\",\"status\":\"completed\",\"type\":\"message\"}],\"parallel_tool_calls\":true,\"presence_penalty\":0,\"previous_response_id\":n...[truncated]"
+  }
+}

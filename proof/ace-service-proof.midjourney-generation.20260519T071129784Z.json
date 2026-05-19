@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-05-19T07:11:29.784Z",
+  "status": "captured-ace-api-service-proof",
+  "serviceId": "midjourney-generation",
+  "safety": {
+    "storesApiToken": false,
+    "storesRawResponse": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "publishesPublicly": false,
+    "unsafeFamiliesSkipped": [
+      "captcha",
+      "identity",
+      "proxy"
+    ]
+  },
+  "notes": [
+    "API token was provided through environment/stdin wrapper only.",
+    "Stored proof is a public-safe summary, not the raw provider response.",
+    "This proves service execution only if httpStatus is 2xx and ok is true."
+  ],
+  "ok": true,
+  "httpStatus": 200,
+  "serviceLabel": "Midjourney Generation",
+  "family": "ai-image",
+  "docs": "https://docs.acedata.cloud/en/mcp/midjourney",
+  "endpoint": "https://api.acedata.cloud/midjourney/imagine",
+  "elapsedMs": 65967,
+  "requestShape": {
+    "method": "POST",
+    "bodyKeys": [
+      "prompt"
+    ],
+    "model": null
+  },
+  "responseSummary": {
+    "topLevelKeys": [
+      "actions",
+      "elapsed",
+      "finished_at",
+      "image_height",
+      "image_id",
+      "image_url",
+      "image_width",
+      "progress",
+      "raw_image_height",
+      "raw_image_url",
+      "raw_image_width",
+      "started_at",
+      "sub_image_urls",
+      "success",
+      "task_id"
+    ],
+    "id": null,
+    "model": null,
+    "usage": null,
+    "mediaUrls": [
+      "https://storage.fonedis.cc/upload_1779174663608471925.png?imageMogr2/thumbnail/!50p",
+      "https://storage.fonedis.cc/upload_1779174663608471925.png"
+    ],
+    "preview": "{\"image_url\":\"https://storage.fonedis.cc/upload_1779174663608471925.png?imageMogr2/thumbnail/!50p\",\"image_width\":512,\"image_height\":512,\"actions\":[\"upscale1\",\"upscale2\",\"upscale3\",\"upscale4\",\"reroll\",\"variation1\",\"variation2\",\"variation3\",\"variation4\"],\"raw_image_url\":\"https://storage.fonedis.cc/upload_1779174663608471925.png\",\"raw_image_width\":1024,\"raw_image_height\":1024,\"sub_image_urls\":[],\"progress\":100,\"image_id\":\"1506192558613594112\",\"task_id\":\"f57c57e2-a05f-4a0e-afe4-f8f80a673be9\",\"success\":true,\"started_at\":\"2026-05-19T07:10:23.931Z\",\"finished_at\":\"2026-05-19T07:11:29.696Z\",\"elapsed\":65.765}"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-05-19T21:40:17.948Z",
+  "status": "blocked-preflight-failed-no-sign-no-spend",
+  "approvalId": "appr_20260518022742_wg7log",
+  "safety": {
+    "createsAccount": false,
+    "usesManagedSigner": true,
+    "storesSignerSecret": false,
+    "storesPlatformToken": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "retriesPayment": false,
+    "spendsFunds": false
+  },
+  "source": {
+    "docs": "https://docs.acedata.cloud/en/guides/x402",
+    "coinbaseBuyerDocs": "https://docs.cdp.coinbase.com/x402/quickstart-for-buyers",
+    "apiBase": "https://platform.acedata.cloud",
+    "endpointShape": "POST /api/v1/orders/{order_id}/pay/ with { \"pay_way\": \"X402\" }"
+  },
+  "notes": [
+    "Initial Ace request did not return 402 payment requirements. No signature, retry, or payment was attempted."
+  ],
+  "ok": false,
+  "orderId": "a1cc2a...[redacted]...b6c1",
+  "httpStatus": 400,
+  "responsePublicSummary": {
+    "topLevelKeys": [
+      "code",
+      "detail",
+      "trace_id"
+    ],
+    "fields": {
+      "code": "invalid"
+    }
+  },
+  "preflightBlockers": [
+    "ace_response_not_payment_required"
+  ],
+  "walletBaseUsdcAtomic": "1042155",
+  "walletBaseUsdc": "1.042155",
+  "executeRequested": false,
+  "approvalEnvMatches": false,
+  "approvedMaxPerOrderAtomic": "1330000",
+  "approvedMaxPerOrderUsdc": "1.33",
+  "approvedMaxTotalAtomic": "3990000",
+  "approvedMaxTotalUsdc": "3.99",
+  "nextAction": "Set ACE_X402_EXECUTE=true and ACE_X402_LIVE_APPROVAL to the approval id to perform the approved payment batch."
+}

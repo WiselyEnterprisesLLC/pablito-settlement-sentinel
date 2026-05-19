@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-05-18T04:08:29.950Z",
+  "status": "captured-ace-api-service-proof",
+  "serviceId": "serp_google",
+  "safety": {
+    "storesApiToken": false,
+    "storesRawResponse": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "publishesPublicly": false
+  },
+  "notes": [
+    "API token was provided through process env/stdin wrapper only.",
+    "Stored proof is a public-safe summary, not the raw provider response.",
+    "This proves service execution only if httpStatus is 2xx and ok is true."
+  ],
+  "ok": true,
+  "httpStatus": 200,
+  "serviceLabel": "Ace SERP Google data service",
+  "docs": "https://docs.acedata.cloud/en/guides/serp/serp_google",
+  "endpoint": "https://api.acedata.cloud/serp/google",
+  "requestShape": {
+    "method": "POST",
+    "bodyKeys": [
+      "num",
+      "query"
+    ],
+    "model": null
+  },
+  "responseSummary": {
+    "topLevelKeys": [
+      "organic",
+      "people_also_ask"
+    ],
+    "id": null,
+    "model": null,
+    "usage": null,
+    "choices": null,
+    "organicResults": null,
+    "preview": "{\"organic\":[{\"title\":\"3 Simple Automations Any Small Business Can Set Up Today to ...\",\"link\":\"https://www.reddit.com/r/smallbusiness/comments/1q4cjlq/3_simple_automations_any_small_business_can_set/\",\"snippet\":\"Missed-call text back (stops lead leakage) What it does: If you miss a call, it instantly texts the caller so they don't move on. OTS SaaS you ...\",\"date\":\"Jan 5, 2026\",\"attributes\":{\"Missing\":\"pain | Show results with:pain\"},\"sitelinks\":[{\"title\":\"Spent 3 hours this week just following up with leads manually, there ...\",\"link\":\"https://www.reddit.com/r/smallbusiness/comments/1svub6a/spent_3_hours_this_week_just_following_up_with/\"},{\"title\":\"Is automating follow-ups actually killing the human side of business ...\",\"link\":\"https://www.reddit.com/r/automation/comments/1rnx3pa/is_automating_followups_actually_killing_the/\"}],\"position\":1},{\"title\":\"Lead Follow-Up Automation | Why It's Still Broken\",\"link\":\"https://intentionallyinspirational.com/2026/04/16/why-lead-follow-up-autom...[truncated]"
+  }
+}

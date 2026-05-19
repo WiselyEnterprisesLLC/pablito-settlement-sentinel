@@ -1,0 +1,73 @@
+{
+  "name": "Ace Data Cloud x402 Connector Suite",
+  "status": "draft-public-metadata-not-live-evidence",
+  "description": "Reusable connector suite for Ace Data Cloud AI services with x402/SAP-ready proof capture.",
+  "connectorCount": 17,
+  "bountyCoreServiceIds": [
+    "openai-chat-completions",
+    "serp-google-search",
+    "flux-image-generation",
+    "short-url"
+  ],
+  "universalCryptoPaymentRouter": {
+    "status": "dry-run-modeled-live-adapters-needed",
+    "purpose": "Let a user pay for Ace AI services with the crypto they already have by quoting conversion paths into the Ace-required settlement asset.",
+    "requiredSettlementOptions": [
+      {
+        "id": "ace-x402-base-usdc",
+        "protocol": "x402",
+        "network": "base",
+        "asset": "USDC",
+        "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "priority": 1,
+        "note": "Ace x402 documented route: Base USDC payment envelope."
+      },
+      {
+        "id": "sap-solana-usdc",
+        "protocol": "SAP",
+        "network": "solana",
+        "asset": "USDC",
+        "tokenAddress": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "priority": 2,
+        "note": "SAP-compatible Solana USDC route when the target service accepts SAP settlement."
+      },
+      {
+        "id": "sap-solana-sol",
+        "protocol": "SAP",
+        "network": "solana",
+        "asset": "SOL",
+        "tokenAddress": "So11111111111111111111111111111111111111112",
+        "priority": 3,
+        "note": "SAP-compatible SOL route when the target service accepts native SOL pricing."
+      }
+    ],
+    "supportedRouteClasses": [
+      "native-settlement",
+      "same-chain-dex-swap",
+      "solana-jupiter-then-bridge",
+      "base-dex-then-x402",
+      "cex-convert-withdraw",
+      "cross-chain-aggregator"
+    ],
+    "liveAdaptersNeeded": [
+      "Ace payment-required parser to read exact required network/asset/amount",
+      "DEX quotes: Jupiter for Solana, 0x/1inch/Uniswap or equivalent for EVM",
+      "Bridge quotes: Socket/LiFi/Wormhole/official bridge adapter where available",
+      "CEX quotes/withdraw estimate: Coinbase/Kraken only if user explicitly uses an exchange account",
+      "Receipt writer: conversion quote, user approvals, tx ids, x402/SAP receipt"
+    ]
+  },
+  "safety": {
+    "spendsFunds": false,
+    "spendsAceCredits": false,
+    "signsWallet": false,
+    "createsAccount": false,
+    "networkMutation": false,
+    "artificialVolume": false
+  },
+  "liveEvidenceStatus": {
+    "aceServiceUsage": "missing",
+    "sapRegistration": "missing",
+    "x402Settlement": "missing"
+  }
+}

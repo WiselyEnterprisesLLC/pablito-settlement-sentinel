@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-05-19T06:44:43.826Z",
+  "status": "captured-ace-api-service-proof",
+  "serviceId": "suno-music-generation",
+  "safety": {
+    "storesApiToken": false,
+    "storesRawResponse": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "publishesPublicly": false,
+    "unsafeFamiliesSkipped": [
+      "captcha",
+      "identity",
+      "proxy"
+    ]
+  },
+  "notes": [
+    "API token was provided through environment/stdin wrapper only.",
+    "Stored proof is a public-safe summary, not the raw provider response.",
+    "This proves service execution only if httpStatus is 2xx and ok is true."
+  ],
+  "ok": false,
+  "httpStatus": 404,
+  "serviceLabel": "Suno Music Generation",
+  "family": "ai-audio",
+  "docs": "https://docs.acedata.cloud/en/mcp/suno",
+  "endpoint": "https://api.acedata.cloud/suno/generate",
+  "elapsedMs": 180,
+  "requestShape": {
+    "method": "POST",
+    "bodyKeys": [
+      "prompt"
+    ],
+    "model": null
+  },
+  "responseSummary": {
+    "topLevelKeys": [
+      "message"
+    ],
+    "id": null,
+    "model": null,
+    "usage": null,
+    "preview": "{\"message\":\"no Route matched with those values\"}"
+  }
+}

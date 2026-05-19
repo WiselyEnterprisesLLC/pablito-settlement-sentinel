@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-05-18T03:27:10.101Z",
+  "status": "captured-ace-api-service-proof",
+  "serviceId": "gemini_chat",
+  "safety": {
+    "storesApiToken": false,
+    "storesRawResponse": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "publishesPublicly": false
+  },
+  "notes": [
+    "API token was provided through process env/stdin wrapper only.",
+    "Stored proof is a public-safe summary, not the raw provider response.",
+    "This proves service execution only if httpStatus is 2xx and ok is true."
+  ],
+  "ok": false,
+  "httpStatus": 401,
+  "serviceLabel": "Ace Gemini chat completion",
+  "docs": "https://docs.acedata.cloud/en/guides/gemini/gemini_chat_completions",
+  "endpoint": "https://api.acedata.cloud/gemini/chat/completions",
+  "requestShape": {
+    "method": "POST",
+    "bodyKeys": [
+      "max_tokens",
+      "messages",
+      "model",
+      "temperature"
+    ],
+    "model": "gemini-2.5-flash"
+  },
+  "responseSummary": {
+    "topLevelKeys": [
+      "error",
+      "trace_id"
+    ],
+    "id": null,
+    "model": null,
+    "usage": null,
+    "choices": null,
+    "organicResults": null,
+    "preview": "{\"error\":{\"message\":\"The token is invalid, please make sure your token is correct.\",\"code\":\"invalid_token\"},\"trace_id\":\"36feb890-5254-41cc-8d01-51fdf8bde6f1\"}"
+  }
+}

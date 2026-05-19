@@ -1,0 +1,291 @@
+{
+  "generatedAt": "2026-05-19T22:25:50.507Z",
+  "status": "three-live-ace-x402-onchain-proofs-bundled",
+  "scope": {
+    "describes": "Public-safe evidence bundle for Ace x402 payment artifacts and Ace service usage proofs.",
+    "doesNotClaim": [
+      "full SAP mainnet settlement",
+      "SAP mainnet identity registration",
+      "Synapse Sentinel usage",
+      "final Superteam submission",
+      "reward won or owed"
+    ]
+  },
+  "safety": {
+    "storesSecrets": false,
+    "storesRawPaymentHeader": false,
+    "storesPlatformToken": false,
+    "signsPayment": false,
+    "spendsFunds": false,
+    "publishesPublicly": false
+  },
+  "aceX402Payment": {
+    "evidenceFile": "proof/ace-x402-live-payment.46e3fb46-2fb.20260519T215142591Z.json",
+    "ok": true,
+    "generatedAt": "2026-05-19T21:51:42.591Z",
+    "approvalId": "appr_20260518022742_wg7log",
+    "httpStatus": 200,
+    "orderId": "46e3fb...[redacted]...b862",
+    "orderState": "Finished",
+    "payWay": "X402",
+    "network": "base",
+    "payer": "0x122c67ad0DD3bA27bfCaCcCD9aFd9c3fd99216Fa",
+    "payTo": "0x4F0E2D3477a1B94CF33d16E442CEe4733dadCeE7",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "maxAmountRequiredAtomic": "950000",
+    "walletBaseUsdcBefore": "1.001367",
+    "paymentResponseHeaderPresent": true,
+    "transaction": "0x456b10aaec7e5242c3210dc8d190c388547395629f27224b19a31b0cb73329f0"
+  },
+  "aceX402Payments": {
+    "status": "three-onchain-proofs-captured",
+    "targetOnChainProofCount": 3,
+    "onChainProofCount": 3,
+    "hasAtLeastThreeOnChainX402Proofs": true,
+    "batchEvidenceFile": "proof/ace-x402-onchain-batch.latest.json",
+    "payments": [
+      {
+        "evidenceFile": "proof/ace-x402-live-payment.a1cc2a8e-a8a.20260518T030110902Z.json",
+        "ok": true,
+        "generatedAt": "2026-05-18T03:01:10.902Z",
+        "approvalId": "appr_20260518022742_wg7log",
+        "httpStatus": 200,
+        "orderId": "a1cc2a...[redacted]...b6c1",
+        "orderState": "Finished",
+        "payWay": "X402",
+        "network": "base",
+        "payer": "0x122c67ad0DD3bA27bfCaCcCD9aFd9c3fd99216Fa",
+        "payTo": "0x4F0E2D3477a1B94CF33d16E442CEe4733dadCeE7",
+        "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "maxAmountRequiredAtomic": "1330000",
+        "walletBaseUsdcBefore": "1.422155",
+        "paymentResponseHeaderPresent": true,
+        "transaction": "0x237b13bd45979444d1952325e1d5729362ece25e115929c3bd472a17a2b37243"
+      },
+      {
+        "evidenceFile": "proof/ace-x402-live-payment.f1bac65c-8a7.20260519T214043191Z.json",
+        "ok": true,
+        "generatedAt": "2026-05-19T21:40:43.191Z",
+        "approvalId": "appr_20260518022742_wg7log",
+        "httpStatus": 200,
+        "orderId": "f1bac6...[redacted]...9939",
+        "orderState": "Finished",
+        "payWay": "X402",
+        "network": "base",
+        "payer": "0x122c67ad0DD3bA27bfCaCcCD9aFd9c3fd99216Fa",
+        "payTo": "0x4F0E2D3477a1B94CF33d16E442CEe4733dadCeE7",
+        "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "maxAmountRequiredAtomic": "950000",
+        "walletBaseUsdcBefore": "1.042155",
+        "paymentResponseHeaderPresent": true,
+        "transaction": "0x77ea16715ed3a30bea84d4404a5ad2b89cfdef090320c4ecf7c33384f2d932ac"
+      },
+      {
+        "evidenceFile": "proof/ace-x402-live-payment.46e3fb46-2fb.20260519T215142591Z.json",
+        "ok": true,
+        "generatedAt": "2026-05-19T21:51:42.591Z",
+        "approvalId": "appr_20260518022742_wg7log",
+        "httpStatus": 200,
+        "orderId": "46e3fb...[redacted]...b862",
+        "orderState": "Finished",
+        "payWay": "X402",
+        "network": "base",
+        "payer": "0x122c67ad0DD3bA27bfCaCcCD9aFd9c3fd99216Fa",
+        "payTo": "0x4F0E2D3477a1B94CF33d16E442CEe4733dadCeE7",
+        "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+        "maxAmountRequiredAtomic": "950000",
+        "walletBaseUsdcBefore": "1.001367",
+        "paymentResponseHeaderPresent": true,
+        "transaction": "0x456b10aaec7e5242c3210dc8d190c388547395629f27224b19a31b0cb73329f0"
+      }
+    ]
+  },
+  "aceOrderVerifier": {
+    "evidenceFile": "proof/ace-order-evidence.latest.json",
+    "ok": false,
+    "httpStatus": 500,
+    "documentedPaymentStateSatisfied": false,
+    "orderState": null,
+    "platformBlocker": "Ace documented GET-order verifier returned HTTP 500; retain payment response and transaction proof as stronger evidence until the platform endpoint is healthy."
+  },
+  "aceServiceUsage": {
+    "status": "three-distinct-services-captured",
+    "distinctServiceCount": 15,
+    "distinctServiceIds": [
+      "gemini_chat",
+      "kling-video-generation",
+      "localization-translate",
+      "midjourney-generation",
+      "nano-banana-image-generation",
+      "openai-chat-completions",
+      "openai-embeddings",
+      "openai-responses",
+      "openai_chat",
+      "seedream-image-generation",
+      "serp-google-search",
+      "serp_google",
+      "short-url",
+      "suno-music-generation",
+      "veo-video-generation"
+    ],
+    "proofFiles": [
+      {
+        "file": "proof/ace-service-proof.gemini_chat.20260518T040734030Z.json",
+        "serviceId": "gemini_chat",
+        "serviceLabel": "Ace Gemini chat completion",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/gemini/chat/completions",
+        "generatedAt": "2026-05-18T04:07:34.030Z"
+      },
+      {
+        "file": "proof/ace-service-proof.kling-video-generation.20260519T071806400Z.json",
+        "serviceId": "kling-video-generation",
+        "serviceLabel": "Kling Video Generation",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/kling/videos",
+        "generatedAt": "2026-05-19T07:18:06.400Z"
+      },
+      {
+        "file": "proof/ace-service-proof.localization-translate.20260519T071914357Z.json",
+        "serviceId": "localization-translate",
+        "serviceLabel": "Localization Translate",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/localization/translate",
+        "generatedAt": "2026-05-19T07:19:14.357Z"
+      },
+      {
+        "file": "proof/ace-service-proof.midjourney-generation.20260519T064442525Z.json",
+        "serviceId": "midjourney-generation",
+        "serviceLabel": "Midjourney Generation",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/midjourney/imagine",
+        "generatedAt": "2026-05-19T06:44:42.525Z"
+      },
+      {
+        "file": "proof/ace-service-proof.midjourney-generation.20260519T071129784Z.json",
+        "serviceId": "midjourney-generation",
+        "serviceLabel": "Midjourney Generation",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/midjourney/imagine",
+        "generatedAt": "2026-05-19T07:11:29.784Z"
+      },
+      {
+        "file": "proof/ace-service-proof.nano-banana-image-generation.20260519T071458777Z.json",
+        "serviceId": "nano-banana-image-generation",
+        "serviceLabel": "Nano Banana Image Generation",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/nano-banana/images",
+        "generatedAt": "2026-05-19T07:14:58.777Z"
+      },
+      {
+        "file": "proof/ace-service-proof.openai_chat.20260518T040727080Z.json",
+        "serviceId": "openai_chat",
+        "serviceLabel": "Ace OpenAI-compatible chat completion",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/openai/chat/completions",
+        "generatedAt": "2026-05-18T04:07:27.080Z"
+      },
+      {
+        "file": "proof/ace-service-proof.openai-chat-completions.20260519T064213542Z.json",
+        "serviceId": "openai-chat-completions",
+        "serviceLabel": "OpenAI Chat Completions",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/openai/chat/completions",
+        "generatedAt": "2026-05-19T06:42:13.542Z"
+      },
+      {
+        "file": "proof/ace-service-proof.openai-chat-completions.20260519T070902300Z.json",
+        "serviceId": "openai-chat-completions",
+        "serviceLabel": "OpenAI Chat Completions",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/openai/chat/completions",
+        "generatedAt": "2026-05-19T07:09:02.300Z"
+      },
+      {
+        "file": "proof/ace-service-proof.openai-embeddings.20260519T073913133Z.json",
+        "serviceId": "openai-embeddings",
+        "serviceLabel": "OpenAI Embeddings",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/openai/embeddings",
+        "generatedAt": "2026-05-19T07:39:13.133Z"
+      },
+      {
+        "file": "proof/ace-service-proof.openai-responses.20260519T064217168Z.json",
+        "serviceId": "openai-responses",
+        "serviceLabel": "OpenAI Responses",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/openai/responses",
+        "generatedAt": "2026-05-19T06:42:17.168Z"
+      },
+      {
+        "file": "proof/ace-service-proof.openai-responses.20260519T070905981Z.json",
+        "serviceId": "openai-responses",
+        "serviceLabel": "OpenAI Responses",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/openai/responses",
+        "generatedAt": "2026-05-19T07:09:05.981Z"
+      },
+      {
+        "file": "proof/ace-service-proof.seedream-image-generation.20260519T071023165Z.json",
+        "serviceId": "seedream-image-generation",
+        "serviceLabel": "ByteDance Seedream Image Generation",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/seedream/images",
+        "generatedAt": "2026-05-19T07:10:23.165Z"
+      },
+      {
+        "file": "proof/ace-service-proof.serp_google.20260518T040829950Z.json",
+        "serviceId": "serp_google",
+        "serviceLabel": "Ace SERP Google data service",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/serp/google",
+        "generatedAt": "2026-05-18T04:08:29.950Z"
+      },
+      {
+        "file": "proof/ace-service-proof.serp-google-search.20260519T071909761Z.json",
+        "serviceId": "serp-google-search",
+        "serviceLabel": "Google Search / SERP",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/serp/google",
+        "generatedAt": "2026-05-19T07:19:09.761Z"
+      },
+      {
+        "file": "proof/ace-service-proof.short-url.20260519T071910015Z.json",
+        "serviceId": "short-url",
+        "serviceLabel": "Short URL",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/shorturl",
+        "generatedAt": "2026-05-19T07:19:10.015Z"
+      },
+      {
+        "file": "proof/ace-service-proof.short-url.20260519T074356428Z.json",
+        "serviceId": "short-url",
+        "serviceLabel": "Short URL",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/shorturl",
+        "generatedAt": "2026-05-19T07:43:56.428Z"
+      },
+      {
+        "file": "proof/ace-service-proof.suno-music-generation.20260519T071908086Z.json",
+        "serviceId": "suno-music-generation",
+        "serviceLabel": "Suno Music Generation",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/suno/audios",
+        "generatedAt": "2026-05-19T07:19:08.086Z"
+      },
+      {
+        "file": "proof/ace-service-proof.veo-video-generation.20260519T071654540Z.json",
+        "serviceId": "veo-video-generation",
+        "serviceLabel": "Veo Video Generation",
+        "httpStatus": 200,
+        "endpoint": "https://api.acedata.cloud/veo/videos",
+        "generatedAt": "2026-05-19T07:16:54.540Z"
+      }
+    ]
+  },
+  "reviewerClaimLevel": [
+    "Can cite three distinct Ace x402 on-chain payment proofs with HTTP 200 payment responses and Base transaction hashes.",
+    "Can cite at least three distinct Ace API service proof summaries if the route is the Ace category.",
+    "Cannot cite full SAP settlement or bounty completion until the remaining live gates are closed."
+  ]
+}

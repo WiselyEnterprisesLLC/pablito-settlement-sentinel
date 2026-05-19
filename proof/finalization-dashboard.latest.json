@@ -1,0 +1,152 @@
+{
+  "generatedAt": "2026-05-19T22:35:33.442Z",
+  "listing": {
+    "title": "Autonomous Agent Bounty: OOBE x Ace Data Cloud",
+    "url": "https://superteam.fun/earn/listing/autonomous-agent-bounty-oobe-ace-data-cloud/",
+    "prizePool": 2400,
+    "token": "USDC",
+    "liveSubmissionsSeen": 19,
+    "winnerAnnouncement": "June 10, 2026"
+  },
+  "currentVerdict": "not-final-yet",
+  "strongestRoute": "Ace Data Cloud Usage category",
+  "readiness": {
+    "competitivePercent": 70,
+    "publicExportReady": true,
+    "releaseRedFlags": 0,
+    "releasePlaceholderFiles": 0,
+    "publicExportFiles": 196,
+    "aceDistinctServiceCount": 15,
+    "aceX402PaymentCaptured": true,
+    "aceX402OnChainProofCount": 3,
+    "aceX402ThreeOnChainCaptured": true,
+    "sapMainnetIdentityCaptured": true,
+    "atomicLiveRunCaptured": true,
+    "publicRepoPublished": true,
+    "xWalkthroughPosted": false,
+    "superteamSubmitted": false,
+    "publicMetadataReachable": "all-public-urls-readable",
+    "sapIdentityStatus": "registered-live-identity-found"
+  },
+  "gates": [
+    {
+      "id": "public_export",
+      "label": "Scoped public export",
+      "status": "ready",
+      "approvalRequired": true,
+      "nextAction": "Review and approve creating the public GitHub repo from .public-export/pablito-settlement-sentinel.",
+      "evidence": [
+        "proof/public-release-check.latest.json",
+        "proof/public-export-manifest.latest.json"
+      ]
+    },
+    {
+      "id": "ace_services",
+      "label": "Ace service usage",
+      "status": "captured",
+      "approvalRequired": false,
+      "nextAction": "No more service breadth is required for the minimum Ace category proof.",
+      "evidence": [
+        "proof/settlement-evidence-bundle.latest.json",
+        "proof/ace-service-proof.*.json"
+      ]
+    },
+    {
+      "id": "ace_x402_payment",
+      "label": "Ace x402 payment artifact",
+      "status": "captured",
+      "approvalRequired": false,
+      "nextAction": "Use the redacted payment artifact as the first Ace x402 on-chain proof.",
+      "evidence": [
+        "proof/ace-x402-live-payment.latest.json",
+        "proof/settlement-evidence-bundle.latest.json"
+      ]
+    },
+    {
+      "id": "ace_x402_three_onchain",
+      "label": "Three Ace x402 on-chain proofs",
+      "status": "captured",
+      "approvalRequired": false,
+      "nextAction": "Attach the bundled on-chain proof list to the submission.",
+      "evidence": [
+        "proof/ace-x402-onchain-batch.latest.json",
+        "proof/settlement-evidence-bundle.latest.json",
+        "proof/ace-x402-live-payment.*.json"
+      ]
+    },
+    {
+      "id": "sap_identity",
+      "label": "SAP mainnet identity",
+      "status": "registered",
+      "approvalRequired": false,
+      "nextAction": "Keep SAP transaction/PDA proof attached; keep refreshing explorer/API search until it indexes.",
+      "evidence": [
+        "proof/sap-registration.live.latest.json",
+        "proof/sap-identity-status.latest.json",
+        "proof/synapse-explorer-snapshot.latest.json"
+      ]
+    },
+    {
+      "id": "atomic_live_run",
+      "label": "Single atomic live run",
+      "status": "captured",
+      "approvalRequired": false,
+      "nextAction": "Review end-to-end-live-run.20260519T221510Z.json and re-run publication checks.",
+      "evidence": [
+        "proof/end-to-end-run-plan.latest.json",
+        "proof/end-to-end-live-run.template.json"
+      ]
+    },
+    {
+      "id": "github_publication",
+      "label": "Public GitHub repo",
+      "status": "published",
+      "approvalRequired": false,
+      "nextAction": "Fill the final repo URL and commit hash in submission drafts.",
+      "evidence": [
+        ".public-export/pablito-settlement-sentinel"
+      ]
+    },
+    {
+      "id": "x_walkthrough",
+      "label": "X walkthrough",
+      "status": "draft-only",
+      "approvalRequired": true,
+      "nextAction": "Post only after public repo and final proof links are accurate and approved.",
+      "evidence": [
+        "proof/x-walkthrough-draft.md"
+      ]
+    },
+    {
+      "id": "superteam_submission",
+      "label": "Superteam final submission",
+      "status": "not-submitted",
+      "approvalRequired": true,
+      "nextAction": "Submit after repo, X walkthrough, and final evidence are ready and approved.",
+      "evidence": [
+        "proof/superteam-submission-draft.final-shape.md"
+      ]
+    }
+  ],
+  "criticalMissing": [
+    "x_walkthrough",
+    "superteam_submission"
+  ],
+  "nextMoveOrder": [
+    "Refresh read-only public URL/SAP identity snapshots.",
+    "Keep the three Ace x402 Base transaction proofs attached; do not create more payment volume unless the usage campaign has an explicit budget.",
+    "Keep the public GitHub repo URL and commit hash attached to all final submission copy.",
+    "Keep SAP mainnet registration transaction/PDA proof attached; refresh explorer/API indexing snapshots.",
+    "Keep the atomic live run end-to-end-live-run.20260519T221510Z.json and deliverable hash attached to the proof bundle.",
+    "Post the X walkthrough with repo/proof links and required tags.",
+    "Submit the Superteam bounty with Ace category selected and no overclaims.",
+    "Run legitimate Ace usage daily until the deadline if budget remains approved."
+  ],
+  "rulesForFinalClaims": [
+    "Do not claim the reward is won, owed, escrowed, or guaranteed.",
+    "Do not claim full SAP settlement until SAP registration/settlement proof exists.",
+    "Do not expose Ace token, order secrets, wallet secrets, private OpenClaw paths, or private memory.",
+    "Describe current Ace x402 proof as three captured live Ace x402 Base transaction proofs; do not overclaim full SAP settlement until SAP proof exists.",
+    "State the chosen category as Ace Data Cloud Usage unless sponsor guidance changes."
+  ]
+}

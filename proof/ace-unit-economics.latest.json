@@ -1,0 +1,468 @@
+{
+  "generatedAt": "2026-05-19T08:02:36.429Z",
+  "source": "https://platform.acedata.cloud/api/v1/services/?limit=300",
+  "creditUnitNote": "Ace public service catalog reports consumption in Credit. Cash USD conversion below uses public package price/amount from Ace API services; confirm billing currency in dashboard before treating as accounting-final.",
+  "smallPackUsdPerCredit": 0.11924528301886793,
+  "bestPackUsdPerCredit": 0.09512605042016807,
+  "packageExamples": [
+    {
+      "price": 63.2,
+      "amount": 530,
+      "usdPerCredit": 0.11924528
+    },
+    {
+      "price": 126,
+      "amount": 1110,
+      "usdPerCredit": 0.11351351
+    },
+    {
+      "price": 647,
+      "amount": 5950,
+      "usdPerCredit": 0.1087395
+    },
+    {
+      "price": 1313,
+      "amount": 12500,
+      "usdPerCredit": 0.10504
+    },
+    {
+      "price": 2528,
+      "amount": 25000,
+      "usdPerCredit": 0.10112
+    }
+  ],
+  "rows": [
+    {
+      "serviceId": "openai-chat-completions",
+      "family": "ai-chat",
+      "hostedPriceUsd": 0.25,
+      "hostedInvokeAllowed": true,
+      "aceTitle": "OpenAI 生成",
+      "aceAlias": "openai",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 1,
+      "aceCreditsForTypicalOrObserved": 0.0064559625,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 26,
+      "aceCashCostSmallPackUsd": 0.00076984,
+      "aceCashCostBestPackUsd": 0.00061413,
+      "grossMarginSmallPackUsd": 0.24923016,
+      "grossMarginBestPackUsd": 0.24938587,
+      "observedUsage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 152,
+        "total_tokens": 166
+      },
+      "matchedConsumption": {
+        "*": [
+          4.199,
+          0.000001,
+          {
+            "+": [
+              {
+                "*": [
+                  1.25,
+                  {
+                    "var": [
+                      "prompt_tokens",
+                      0
+                    ]
+                  }
+                ]
+              },
+              {
+                "*": [
+                  10,
+                  {
+                    "var": [
+                      "completion_tokens",
+                      0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "serviceId": "openai-responses",
+      "family": "ai-chat",
+      "hostedPriceUsd": 0.25,
+      "hostedInvokeAllowed": true,
+      "aceTitle": "OpenAI 生成",
+      "aceAlias": "openai",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 1,
+      "aceCreditsForTypicalOrObserved": 0.0009972625,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 26,
+      "aceCashCostSmallPackUsd": 0.00011892,
+      "aceCashCostBestPackUsd": 0.00009487,
+      "grossMarginSmallPackUsd": 0.24988108,
+      "grossMarginBestPackUsd": 0.24990513,
+      "observedUsage": {
+        "prompt_tokens": 14,
+        "completion_tokens": 22,
+        "input_tokens": 14,
+        "output_tokens": 22,
+        "total_tokens": 36
+      },
+      "matchedConsumption": {
+        "*": [
+          4.199,
+          0.000001,
+          {
+            "+": [
+              {
+                "*": [
+                  1.25,
+                  {
+                    "var": [
+                      "prompt_tokens",
+                      0
+                    ]
+                  }
+                ]
+              },
+              {
+                "*": [
+                  10,
+                  {
+                    "var": [
+                      "completion_tokens",
+                      0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "serviceId": "openai-embeddings",
+      "family": "embedding",
+      "hostedPriceUsd": 0.05,
+      "hostedInvokeAllowed": true,
+      "aceTitle": "OpenAI 生成",
+      "aceAlias": "openai",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 1,
+      "aceCreditsForTypicalOrObserved": 0.4199,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 82,
+      "aceCashCostSmallPackUsd": 0.05007109,
+      "aceCashCostBestPackUsd": 0.03994343,
+      "grossMarginSmallPackUsd": -0.00007109,
+      "grossMarginBestPackUsd": 0.01005657,
+      "observedUsage": {
+        "prompt_tokens": 4,
+        "total_tokens": 4
+      },
+      "matchedConsumption": 0.4199
+    },
+    {
+      "serviceId": "seedream-image-generation",
+      "family": "ai-image",
+      "hostedPriceUsd": 0.75,
+      "hostedInvokeAllowed": true,
+      "aceTitle": "ByteDance Seedream 图像生成",
+      "aceAlias": "seedream",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 1,
+      "aceCreditsForTypicalOrObserved": 0.32,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 4,
+      "aceCashCostSmallPackUsd": 0.03815849,
+      "aceCashCostBestPackUsd": 0.03044034,
+      "grossMarginSmallPackUsd": 0.71184151,
+      "grossMarginBestPackUsd": 0.71955966,
+      "observedUsage": null,
+      "matchedConsumption": {
+        "*": [
+          0.32,
+          {
+            "var": [
+              "count",
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "serviceId": "flux-image-generation",
+      "family": "ai-image",
+      "hostedPriceUsd": 0.75,
+      "hostedInvokeAllowed": false,
+      "aceTitle": "Flux 图像生成",
+      "aceAlias": "flux",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 0.5,
+      "aceCreditsForTypicalOrObserved": 0.16,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 8,
+      "aceCashCostSmallPackUsd": 0.01907925,
+      "aceCashCostBestPackUsd": 0.01522017,
+      "grossMarginSmallPackUsd": 0.73092075,
+      "grossMarginBestPackUsd": 0.73477983,
+      "observedUsage": null,
+      "matchedConsumption": {
+        "*": [
+          0.16,
+          {
+            "var": [
+              "count",
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "serviceId": "midjourney-generation",
+      "family": "ai-image",
+      "hostedPriceUsd": 0.75,
+      "hostedInvokeAllowed": true,
+      "aceTitle": "Midjourney 生成",
+      "aceAlias": "midjourney",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 1,
+      "aceCreditsForTypicalOrObserved": 0.27,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 16,
+      "aceCashCostSmallPackUsd": 0.03219623,
+      "aceCashCostBestPackUsd": 0.02568403,
+      "grossMarginSmallPackUsd": 0.71780377,
+      "grossMarginBestPackUsd": 0.72431597,
+      "observedUsage": null,
+      "matchedConsumption": 0.27
+    },
+    {
+      "serviceId": "nano-banana-image-generation",
+      "family": "ai-image",
+      "hostedPriceUsd": 0.75,
+      "hostedInvokeAllowed": true,
+      "aceTitle": "Nano Banana 图像生成",
+      "aceAlias": "nano-banana",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 0,
+      "aceCreditsForTypicalOrObserved": 0.14,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 0,
+      "aceCashCostSmallPackUsd": 0.01669434,
+      "aceCashCostBestPackUsd": 0.01331765,
+      "grossMarginSmallPackUsd": 0.73330566,
+      "grossMarginBestPackUsd": 0.73668235,
+      "observedUsage": null,
+      "matchedConsumption": {
+        "*": [
+          0.14,
+          {
+            "var": [
+              "count",
+              1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "serviceId": "sora-video-generation",
+      "family": "ai-video",
+      "hostedPriceUsd": 2.5,
+      "hostedInvokeAllowed": false,
+      "aceTitle": "Sora 视频生成",
+      "aceAlias": "sora",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 0,
+      "aceCreditsForTypicalOrObserved": 0.56,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 4,
+      "aceCashCostSmallPackUsd": 0.06677736,
+      "aceCashCostBestPackUsd": 0.05327059,
+      "grossMarginSmallPackUsd": 2.43322264,
+      "grossMarginBestPackUsd": 2.44672941,
+      "observedUsage": null,
+      "matchedConsumption": 0.56
+    },
+    {
+      "serviceId": "veo-video-generation",
+      "family": "ai-video",
+      "hostedPriceUsd": 2.5,
+      "hostedInvokeAllowed": true,
+      "aceTitle": "Veo 视频生成",
+      "aceAlias": "veo",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 0,
+      "aceCreditsForTypicalOrObserved": 0.69,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 2,
+      "aceCashCostSmallPackUsd": 0.08227925,
+      "aceCashCostBestPackUsd": 0.06563697,
+      "grossMarginSmallPackUsd": 2.41772075,
+      "grossMarginBestPackUsd": 2.43436303,
+      "observedUsage": null,
+      "matchedConsumption": 0.69
+    },
+    {
+      "serviceId": "kling-video-generation",
+      "family": "ai-video",
+      "hostedPriceUsd": 2.5,
+      "hostedInvokeAllowed": true,
+      "aceTitle": "Kling 视频生成",
+      "aceAlias": "kling",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 2,
+      "aceCreditsForTypicalOrObserved": 2.1,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 25,
+      "aceCashCostSmallPackUsd": 0.25041509,
+      "aceCashCostBestPackUsd": 0.19976471,
+      "grossMarginSmallPackUsd": 2.24958491,
+      "grossMarginBestPackUsd": 2.30023529,
+      "observedUsage": null,
+      "matchedConsumption": 2.1
+    },
+    {
+      "serviceId": "suno-music-generation",
+      "family": "ai-audio",
+      "hostedPriceUsd": 1,
+      "hostedInvokeAllowed": true,
+      "aceTitle": "Suno 音乐生成",
+      "aceAlias": "suno",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 0,
+      "aceCreditsForTypicalOrObserved": 0.55,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 0,
+      "aceCashCostSmallPackUsd": 0.06558491,
+      "aceCashCostBestPackUsd": 0.05231933,
+      "grossMarginSmallPackUsd": 0.93441509,
+      "grossMarginBestPackUsd": 0.94768067,
+      "observedUsage": null,
+      "matchedConsumption": 0.55
+    },
+    {
+      "serviceId": "serp-google-search",
+      "family": "web-data",
+      "hostedPriceUsd": 0.1,
+      "hostedInvokeAllowed": true,
+      "aceTitle": "搜索引擎",
+      "aceAlias": "serp",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 0.2,
+      "aceCreditsForTypicalOrObserved": 0.01,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 0,
+      "aceCashCostSmallPackUsd": 0.00119245,
+      "aceCashCostBestPackUsd": 0.00095126,
+      "grossMarginSmallPackUsd": 0.09880755,
+      "grossMarginBestPackUsd": 0.09904874,
+      "observedUsage": null,
+      "matchedConsumption": 0.01
+    },
+    {
+      "serviceId": "short-url",
+      "family": "web-data",
+      "hostedPriceUsd": 0.1,
+      "hostedInvokeAllowed": true,
+      "aceTitle": "短链接生成",
+      "aceAlias": null,
+      "aceUnit": "Credit",
+      "aceFreeAmount": 1,
+      "aceCreditsForTypicalOrObserved": 0,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 0,
+      "aceCashCostSmallPackUsd": 0,
+      "aceCashCostBestPackUsd": 0,
+      "grossMarginSmallPackUsd": 0.1,
+      "grossMarginBestPackUsd": 0.1,
+      "observedUsage": null,
+      "matchedConsumption": 0
+    },
+    {
+      "serviceId": "localization-translate",
+      "family": "web-data",
+      "hostedPriceUsd": 0.1,
+      "hostedInvokeAllowed": true,
+      "aceTitle": null,
+      "aceAlias": null,
+      "aceUnit": null,
+      "aceFreeAmount": null,
+      "aceCreditsForTypicalOrObserved": null,
+      "aceCostRuleStatus": "no_cost_rules",
+      "aceCostRuleIndex": null,
+      "aceCashCostSmallPackUsd": null,
+      "aceCashCostBestPackUsd": null,
+      "grossMarginSmallPackUsd": null,
+      "grossMarginBestPackUsd": null,
+      "observedUsage": {
+        "prompt_tokens": 151,
+        "completion_tokens": 11,
+        "total_tokens": 162
+      },
+      "matchedConsumption": null
+    },
+    {
+      "serviceId": "captcha-recognition",
+      "family": "captcha",
+      "hostedPriceUsd": 0.25,
+      "hostedInvokeAllowed": false,
+      "aceTitle": "Recaptcha 验证码识别服务",
+      "aceAlias": "recaptcha",
+      "aceUnit": "Credit",
+      "aceFreeAmount": 0,
+      "aceCreditsForTypicalOrObserved": 0.02,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 0,
+      "aceCashCostSmallPackUsd": 0.00238491,
+      "aceCashCostBestPackUsd": 0.00190252,
+      "grossMarginSmallPackUsd": 0.24761509,
+      "grossMarginBestPackUsd": 0.24809748,
+      "observedUsage": null,
+      "matchedConsumption": 0.02
+    },
+    {
+      "serviceId": "identity-idcard-check",
+      "family": "identity",
+      "hostedPriceUsd": 1,
+      "hostedInvokeAllowed": false,
+      "aceTitle": "身份认证",
+      "aceAlias": null,
+      "aceUnit": "Credit",
+      "aceFreeAmount": 1,
+      "aceCreditsForTypicalOrObserved": 0.5,
+      "aceCostRuleStatus": "matched",
+      "aceCostRuleIndex": 0,
+      "aceCashCostSmallPackUsd": 0.05962264,
+      "aceCashCostBestPackUsd": 0.04756303,
+      "grossMarginSmallPackUsd": 0.94037736,
+      "grossMarginBestPackUsd": 0.95243697,
+      "observedUsage": null,
+      "matchedConsumption": 0.5
+    },
+    {
+      "serviceId": "global-proxy",
+      "family": "proxy",
+      "hostedPriceUsd": 0.5,
+      "hostedInvokeAllowed": false,
+      "aceTitle": "全球轮换代理",
+      "aceAlias": null,
+      "aceUnit": "Credit",
+      "aceFreeAmount": 1,
+      "aceCreditsForTypicalOrObserved": null,
+      "aceCostRuleStatus": "no_cost_rules",
+      "aceCostRuleIndex": null,
+      "aceCashCostSmallPackUsd": null,
+      "aceCashCostBestPackUsd": null,
+      "grossMarginSmallPackUsd": null,
+      "grossMarginBestPackUsd": null,
+      "observedUsage": null,
+      "matchedConsumption": null
+    }
+  ]
+}
