@@ -1,6 +1,6 @@
 # OOBE x Ace Finalization Dashboard
 
-Generated: 2026-05-19T22:35:33.442Z
+Generated: 2026-05-19T22:42:02.633Z
 
 Verdict: **not-final-yet**
 
@@ -32,7 +32,7 @@ Strongest route: **Ace Data Cloud Usage category**
 
 | Gate | Status | Approval? | Next action |
 | --- | --- | --- | --- |
-| Scoped public export | ready | yes | Review and approve creating the public GitHub repo from .public-export/pablito-settlement-sentinel. |
+| Scoped public export | ready | no | Public GitHub repo has been published from the scoped export; keep proof links current. |
 | Ace service usage | captured | no | No more service breadth is required for the minimum Ace category proof. |
 | Ace x402 payment artifact | captured | no | Use the redacted payment artifact as the first Ace x402 on-chain proof. |
 | Three Ace x402 on-chain proofs | captured | no | Attach the bundled on-chain proof list to the submission. |

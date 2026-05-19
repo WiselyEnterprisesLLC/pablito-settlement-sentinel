@@ -84,8 +84,12 @@ const gates = [
     'public_export',
     'Scoped public export',
     exportReady ? 'ready' : 'not-ready',
-    exportReady ? 'Review and approve creating the public GitHub repo from .public-export/pablito-settlement-sentinel.' : 'Fix release scan and export manifest first.',
-    true,
+    !exportReady
+      ? 'Fix release scan and export manifest first.'
+      : repoPublished
+        ? 'Public GitHub repo has been published from the scoped export; keep proof links current.'
+        : 'Review and approve creating the public GitHub repo from .public-export/pablito-settlement-sentinel.',
+    exportReady ? !repoPublished : true,
     ['proof/public-release-check.latest.json', 'proof/public-export-manifest.latest.json'],
   ),
   gate(

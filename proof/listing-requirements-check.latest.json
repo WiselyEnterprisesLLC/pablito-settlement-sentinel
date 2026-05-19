@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T22:35:32.846Z",
+  "generatedAt": "2026-05-19T22:39:28.173Z",
   "listing": {
     "id": "66842d34-5ed4-474f-9844-dbbcfcad7ad3",
     "title": "Autonomous Agent Bounty: OOBE × Ace Data Cloud",
@@ -30,7 +30,7 @@
     "publicGithubRepository": {
       "status": "published",
       "required": true,
-      "evidence": "Public repository is live: https://github.com/pwisely/pablito-settlement-sentinel; commit: 19a5a8206c83e2366eae836289a17d1b0775a363.",
+      "evidence": "Public repository is live: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel; commit: 2983714724dc8fca3244a5753fa7e5ee383e7672.",
       "nextAction": "Use repo URL/commit in X walkthrough and Superteam submission."
     },
     "xSubmissionPost": {
@@ -144,7 +144,7 @@
     "xPostMustShareGithubRepo": {
       "status": "published",
       "required": true,
-      "evidence": "Public repository is live: https://github.com/pwisely/pablito-settlement-sentinel; commit: 19a5a8206c83e2366eae836289a17d1b0775a363.",
+      "evidence": "Public repository is live: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel; commit: 2983714724dc8fca3244a5753fa7e5ee383e7672.",
       "nextAction": "Use repo URL/commit in X walkthrough and Superteam submission."
     }
   },

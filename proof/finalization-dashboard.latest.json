@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T22:35:33.442Z",
+  "generatedAt": "2026-05-19T22:42:02.633Z",
   "listing": {
     "title": "Autonomous Agent Bounty: OOBE x Ace Data Cloud",
     "url": "https://superteam.fun/earn/listing/autonomous-agent-bounty-oobe-ace-data-cloud/",
@@ -33,8 +33,8 @@
       "id": "public_export",
       "label": "Scoped public export",
       "status": "ready",
-      "approvalRequired": true,
-      "nextAction": "Review and approve creating the public GitHub repo from .public-export/pablito-settlement-sentinel.",
+      "approvalRequired": false,
+      "nextAction": "Public GitHub repo has been published from the scoped export; keep proof links current.",
       "evidence": [
         "proof/public-release-check.latest.json",
         "proof/public-export-manifest.latest.json"

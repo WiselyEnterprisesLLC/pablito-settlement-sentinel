@@ -12,7 +12,7 @@ Category: Ace Data Cloud Usage.
 
 Autonomous proof trail: trigger -> SAP/tool choice -> Ace service execution -> x402 payment evidence -> deliverable receipt.
 
-Repo: https://github.com/pwisely/pablito-settlement-sentinel
+Repo: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel
 
 2/
 Live proof captured:

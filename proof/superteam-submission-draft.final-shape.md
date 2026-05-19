@@ -41,15 +41,15 @@ Current competitive readiness score: 70%.
 
 ## Evidence Links To Fill After Publication
 
-- Repository: https://github.com/pwisely/pablito-settlement-sentinel
-- Commit: 19a5a8206c83e2366eae836289a17d1b0775a363
+- Repository: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel
+- Commit: 2983714724dc8fca3244a5753fa7e5ee383e7672
 - Public proof page: https://wiselyenterprisesllc.com/oobe-ace/proof
-- Public export summary: https://github.com/pwisely/pablito-settlement-sentinel/blob/main/PUBLIC_EXPORT_SUMMARY.json
-- Reviewer index: https://github.com/pwisely/pablito-settlement-sentinel/blob/main/proof/reviewer-index.md
-- Competitive scorecard: https://github.com/pwisely/pablito-settlement-sentinel/blob/main/proof/competitive-scorecard.latest.json
-- Settlement evidence bundle: https://github.com/pwisely/pablito-settlement-sentinel/blob/main/proof/settlement-evidence-bundle.latest.json
-- Ace x402 artifact: https://github.com/pwisely/pablito-settlement-sentinel/blob/main/proof/ace-x402-onchain-batch.latest.json
-- Ace service proof files: https://github.com/pwisely/pablito-settlement-sentinel/tree/main/proof
+- Public export summary: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel/blob/main/PUBLIC_EXPORT_SUMMARY.json
+- Reviewer index: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel/blob/main/proof/reviewer-index.md
+- Competitive scorecard: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel/blob/main/proof/competitive-scorecard.latest.json
+- Settlement evidence bundle: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel/blob/main/proof/settlement-evidence-bundle.latest.json
+- Ace x402 artifact: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel/blob/main/proof/ace-x402-onchain-batch.latest.json
+- Ace service proof files: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel/tree/main/proof
 - SAP registration evidence: 33mbTuPhn31CXNC1XAViiCHFqXZFohiUGr8uzhXrHSSkEhKdwDidV65NHEo6uCod1fa7nLgmqw557bHRgzLU9jxN
 - Atomic live-run evidence: oobe-ace-live-run-20260519T221510Z
 - Demo/walkthrough: pending approved X or video URL

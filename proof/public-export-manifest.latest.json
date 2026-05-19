@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-19T22:27:19.774Z",
+  "generatedAt": "2026-05-19T22:39:29.436Z",
   "status": "manifest-created",
   "note": "Manifest is generated from the staged export before the manifest itself is copied into the export.",
   "exportPath": ".public-export/pablito-settlement-sentinel",
   "fileCount": 196,
-  "totalBytes": 7092770,
+  "totalBytes": 7092784,
   "missingRequiredFiles": [],
   "safetyBoundary": {
     "publishesPublicly": false,
@@ -482,12 +482,12 @@
     {
       "path": "proof/finalization-dashboard.latest.json",
       "bytes": 5807,
-      "sha256": "c3e05f266533cb4d564713bd1360a0f2e706de1d12c720592b9a647dfca7e876"
+      "sha256": "cba25b78c53073a4705f2fb9f5cb5ea27306f4c7ac3e588076363433aeb7128b"
     },
     {
       "path": "proof/finalization-dashboard.latest.md",
       "bytes": 3231,
-      "sha256": "492c49ee074b50921783b3e33ba48f54d5627d5368adfaae19f94b958f3e1ff6"
+      "sha256": "cadcaefff0f8807b68621f47206691913c78b08c19525370179edafe808be10d"
     },
     {
       "path": "proof/follow-up-draft.md",
@@ -507,7 +507,7 @@
     {
       "path": "proof/listing-requirements-check.latest.json",
       "bytes": 7990,
-      "sha256": "8af24a95fa96aec1c865ad09d871d5eec492780bdbd0e2284378dfd8588ce98c"
+      "sha256": "120894b766996e401be425506ca7ea2b79f7fc57f3399ba2d4dc20734b907db2"
     },
     {
       "path": "proof/live-ace-connector-proof-status-2026-05-19.md",
@@ -587,17 +587,17 @@
     {
       "path": "proof/public-export-manifest.latest.json",
       "bytes": 35522,
-      "sha256": "9dde0e19cf32c9953fc0f4770abdd7e1cd5bf62db075aae0640799f48a3b2189"
+      "sha256": "c8fe941a3007565a3a3f5003d78c8f2eb113c4a5d13498a49945a0de4dc5d3fa"
     },
     {
       "path": "proof/public-release-check.latest.json",
       "bytes": 529,
-      "sha256": "b9149dfbf5a29eb6bdab86b27ba4f1d56b934dcbdc026b21a6e28683e97e962b"
+      "sha256": "c70a8606e6ac281aca5f9655b273174441dd799eff00a4b7a58f874ecbf6bd52"
     },
     {
       "path": "proof/public-url-status.latest.json",
-      "bytes": 3282,
-      "sha256": "ab837230d140c8294841e6f1f54c6dcf182dcceb7d6ce0dc7e9aeb8bf2ac1cbb"
+      "bytes": 3283,
+      "sha256": "a36f5dee4cfa56ae10609fc29a17e8025a1b88d504603f4d25723454bfca6df2"
     },
     {
       "path": "proof/publication-approval-packet.draft.md",
@@ -756,8 +756,8 @@
     },
     {
       "path": "PUBLIC_EXPORT_SUMMARY.json",
-      "bytes": 615,
-      "sha256": "ed1596480691c327bb251695343377f9a6256aef59f4f188cf4d08ef7fad7435"
+      "bytes": 628,
+      "sha256": "07f6e2e6395f0b9361eff92e36b0735d501f6a1c50e9a85502c3af2eaafb3e68"
     },
     {
       "path": "public/ace-connector-suite.metadata.draft.json",

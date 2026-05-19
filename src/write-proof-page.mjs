@@ -152,6 +152,8 @@ const html = `<!doctype html>
       <li><a href="/oobe-ace/pablito-settlement-sentinel.metadata.json">Agent metadata JSON</a></li>
       <li><a href="/.well-known/x402/pablito-settlement-sentinel.json">x402 resource JSON</a></li>
       ${publicSummary?.repositoryUrl ? `<li><a href="${escapeHtml(publicSummary.repositoryUrl)}">Public GitHub repository</a></li>` : ''}
+      ${publicSummary?.repositoryCommit ? `<li>Repository commit: <code>${escapeHtml(publicSummary.repositoryCommit)}</code></li>` : ''}
+      ${e2eLive?.deliverable?.sha256 ? `<li>Atomic deliverable SHA-256: <code>${escapeHtml(e2eLive.deliverable.sha256)}</code></li>` : ''}
       ${e2eLive?.deliverable?.file ? `<li><a href="/oobe-ace/deliverables/${escapeHtml(path.basename(e2eLive.deliverable.file))}">Atomic run deliverable JSON</a></li>` : ''}
     </ul>
 
