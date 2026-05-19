@@ -1,0 +1,13 @@
+{
+  "requestId": "oobe-ace-live-run-20260519T221510Z",
+  "title": "Lead Handoff Workflow Leak - Public Safe Fix Plan",
+  "summary": "The workflow leak is ownership drift: lead capture, first response, and follow-up are split across tools without a timed owner.",
+  "aceServiceFinding": "{\n  \"workflow_leak_classification\": \"Lead Management Inefficiency\",\n  \"automation_step\": {\n    \"description\": \"Implement a centralized CRM system that automatically routes form submissions to a designated owner and tracks follow-up tasks.\",\n    \"benefit\": \"Ensures timely responses and accountability for lead management.\"\n  }\n}",
+  "recommendedStep": "Create one intake queue with a named owner, a 15-minute first-response target, and an automatic next-day follow-up checkpoint for every unclosed lead.",
+  "excludedData": [
+    "private customer details",
+    "credentials",
+    "payment secrets",
+    "internal runtime logs"
+  ]
+}

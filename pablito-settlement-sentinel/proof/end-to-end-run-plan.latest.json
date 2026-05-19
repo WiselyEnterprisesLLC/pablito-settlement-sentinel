@@ -1,0 +1,124 @@
+{
+  "generatedAt": "2026-05-19T22:25:51.791Z",
+  "status": "ready-to-request-controlled-live-run-after-sap-preview",
+  "bountyValidity": "not a live-run proof; this is the exact plan for the missing atomic workflow evidence",
+  "safety": {
+    "signsWallet": false,
+    "sendsTransaction": false,
+    "spendsFunds": false,
+    "publishesPublicly": false,
+    "submitsBounty": false,
+    "storesSecretMaterial": false,
+    "mutatesNetwork": false
+  },
+  "currentSeparateEvidence": {
+    "sapRegistration": {
+      "status": "ready-for-no-send-preview",
+      "evidenceFiles": [
+        "proof/sap-registration.preview.latest.json",
+        "proof/sap-live-gate.latest.json",
+        "proof/sap-mainnet-registration-readiness.latest.json"
+      ],
+      "candidateWallet": "HE9MYDzoLAgnwbRXbiWRGGvoE2QE9LqKdQGJhNLPxtVj",
+      "programAddress": "SAPpUhsWLJG1FfkGRcXagEDMrMsWGjbky7AyhGpFETZ"
+    },
+    "aceServices": {
+      "status": "three-distinct-services-captured",
+      "distinctServiceIds": [
+        "gemini_chat",
+        "kling-video-generation",
+        "localization-translate",
+        "midjourney-generation",
+        "nano-banana-image-generation",
+        "openai-chat-completions",
+        "openai-embeddings",
+        "openai-responses",
+        "openai_chat",
+        "seedream-image-generation",
+        "serp-google-search",
+        "serp_google",
+        "short-url",
+        "suno-music-generation",
+        "veo-video-generation"
+      ],
+      "proofFiles": [
+        "proof/ace-service-proof.gemini_chat.20260518T040734030Z.json",
+        "proof/ace-service-proof.kling-video-generation.20260519T071806400Z.json",
+        "proof/ace-service-proof.localization-translate.20260519T071914357Z.json",
+        "proof/ace-service-proof.midjourney-generation.20260519T064442525Z.json",
+        "proof/ace-service-proof.midjourney-generation.20260519T071129784Z.json",
+        "proof/ace-service-proof.nano-banana-image-generation.20260519T071458777Z.json",
+        "proof/ace-service-proof.openai-chat-completions.20260519T064213542Z.json",
+        "proof/ace-service-proof.openai-chat-completions.20260519T070902300Z.json",
+        "proof/ace-service-proof.openai-embeddings.20260519T073913133Z.json",
+        "proof/ace-service-proof.openai-responses.20260519T064217168Z.json",
+        "proof/ace-service-proof.openai-responses.20260519T070905981Z.json",
+        "proof/ace-service-proof.openai_chat.20260518T040727080Z.json",
+        "proof/ace-service-proof.seedream-image-generation.20260519T071023165Z.json",
+        "proof/ace-service-proof.serp-google-search.20260519T071909761Z.json",
+        "proof/ace-service-proof.serp_google.20260518T040829950Z.json",
+        "proof/ace-service-proof.short-url.20260519T071910015Z.json",
+        "proof/ace-service-proof.short-url.20260519T074356428Z.json",
+        "proof/ace-service-proof.suno-music-generation.20260519T071908086Z.json",
+        "proof/ace-service-proof.veo-video-generation.20260519T071654540Z.json"
+      ]
+    },
+    "acePayment": {
+      "status": "missing",
+      "evidenceFile": null,
+      "transaction": "0x456b10aaec7e5242c3210dc8d190c388547395629f27224b19a31b0cb73329f0",
+      "orderState": "Finished"
+    }
+  },
+  "whySeparateEvidenceIsNotEnough": [
+    "The listing asks for a complete autonomous workflow from trigger to execution to payment.",
+    "Current SAP preview, Ace service proofs, and Ace x402 payment proof were captured as separate controlled steps.",
+    "A strong final submission needs one request id and one evidence bundle that ties trigger, tool selection, service execution, payment artifact, and deliverable together."
+  ],
+  "recommendedAtomicRun": {
+    "category": "Ace Data Cloud",
+    "requestIdShape": "oobe-ace-live-run-YYYYMMDDTHHMMSSZ",
+    "trigger": "A public-safe workflow request asking Pablito to inspect a small business lead/form handoff and produce a bounded fix plan.",
+    "runSteps": [
+      "Preflight balances, configured tokens, public URLs, and SAP identity state.",
+      "Select SAP/x402/Ace capability based on the request and record why that capability was chosen.",
+      "Call one or more Ace Data Cloud services using public-safe input only.",
+      "Attach the existing approved Ace x402 payment artifact if sponsor accepts it, or perform one new minimal payment only after explicit cost approval.",
+      "Generate the public-safe deliverable and hash it.",
+      "Write one final live-run evidence JSON that links every proof file, amount, service id, timestamp, and deliverable hash.",
+      "Run public release checks again before any repo/X/Superteam action."
+    ],
+    "preferredCostMode": "new-minimal-approved-x402-payment",
+    "maxCostModeNote": "No max cost is approved here. Any new service call, payment, or signature needs a separate explicit cap."
+  },
+  "approvalRequiredBeforeAtomicRun": [
+    "Choose whether the run may reuse the existing Ace x402 payment artifact or must perform a fresh minimal payment.",
+    "Approve exact service calls and input text.",
+    "Approve maximum service/payment cost if any new paid call is needed.",
+    "Approve any SAP registration or wallet signature step separately.",
+    "Approve public repo/X/Superteam actions separately after the run is captured."
+  ],
+  "finalEvidenceFileShape": {
+    "filePattern": "proof/end-to-end-live-run.YYYYMMDDTHHMMSSZ.json",
+    "requiredFields": [
+      "requestId",
+      "triggerSummary",
+      "sapIdentityEvidence",
+      "capabilitySelectionReason",
+      "aceServiceProofFiles",
+      "paymentEvidenceFile",
+      "paymentTransactionOrReceipt",
+      "deliverableHash",
+      "safetyReview",
+      "manualInterventionCountDuringRun",
+      "reviewerClaimLevel"
+    ]
+  },
+  "blockersBeforeFinalSubmission": [
+    "SAP mainnet registration evidence remains missing.",
+    "The current Ace payment/service proofs need to be tied into one atomic run or sponsor-confirmed as sufficient.",
+    "Public repo has not been created.",
+    "X walkthrough has not been posted.",
+    "Superteam submission has not been sent."
+  ]
+}

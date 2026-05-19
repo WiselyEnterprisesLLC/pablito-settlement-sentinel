@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-05-19T07:16:54.540Z",
+  "status": "captured-ace-api-service-proof",
+  "serviceId": "veo-video-generation",
+  "safety": {
+    "storesApiToken": false,
+    "storesRawResponse": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "publishesPublicly": false,
+    "unsafeFamiliesSkipped": [
+      "captcha",
+      "identity",
+      "proxy"
+    ]
+  },
+  "notes": [
+    "API token was provided through environment/stdin wrapper only.",
+    "Stored proof is a public-safe summary, not the raw provider response.",
+    "This proves service execution only if httpStatus is 2xx and ok is true."
+  ],
+  "ok": true,
+  "httpStatus": 200,
+  "serviceLabel": "Veo Video Generation",
+  "family": "ai-video",
+  "docs": "https://docs.acedata.cloud/en/mcp/veo",
+  "endpoint": "https://api.acedata.cloud/veo/videos",
+  "elapsedMs": 110255,
+  "requestShape": {
+    "method": "POST",
+    "bodyKeys": [
+      "action",
+      "model",
+      "prompt"
+    ],
+    "model": "veo2-fast"
+  },
+  "responseSummary": {
+    "topLevelKeys": [
+      "data",
+      "elapsed",
+      "finished_at",
+      "started_at",
+      "success",
+      "task_id",
+      "trace_id"
+    ],
+    "id": null,
+    "model": null,
+    "usage": null,
+    "mediaUrls": [
+      "https://platform.cdn.acedata.cloud/veo/f2429ed4-fbdf-4060-a66f-1eee8d17671b.mp4"
+    ],
+    "dataCount": 1,
+    "dataPreview": [
+      {
+        "id": "5787c199-e1cd-475a-be9f-eb5043ceb331",
+        "video_url": "https://platform.cdn.acedata.cloud/veo/f2429ed4-fbdf-4060-a66f-1eee8d17671b.mp4",
+        "created_at": "2026-05-19T07:15:04.808Z",
+        "complete_at": "2026-05-19T07:16:50.046Z",
+        "state": "succeeded"
+      }
+    ]
+  }
+}

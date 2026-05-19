@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-05-19T21:51:42.593Z",
+  "status": "submitted-live-x402-payment-batch",
+  "approvalId": "appr_20260518022742_wg7log",
+  "safety": {
+    "createsAccount": false,
+    "usesManagedSigner": true,
+    "storesSignerSecret": false,
+    "storesPlatformToken": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": true,
+    "retriesPayment": true,
+    "spendsFunds": true
+  },
+  "source": {
+    "docs": "https://docs.acedata.cloud/en/guides/x402",
+    "coinbaseBuyerDocs": "https://docs.cdp.coinbase.com/x402/quickstart-for-buyers",
+    "apiBase": "https://platform.acedata.cloud",
+    "endpointShape": "POST /api/v1/orders/{order_id}/pay/ with { \"pay_way\": \"X402\" }"
+  },
+  "notes": [
+    "Each successful item used a managed CDP signer and stored only public-safe settlement metadata.",
+    "Raw X-PAYMENT headers, platform tokens, wallet secrets, and private signing material are not stored.",
+    "No personal fiat funding was used."
+  ],
+  "ok": true,
+  "orderCount": 1,
+  "targetOnChainProofCount": 3,
+  "onChainProofCount": 1,
+  "payerAddress": "0x122c67ad0DD3bA27bfCaCcCD9aFd9c3fd99216Fa",
+  "walletBaseUsdcBeforeAtomic": "1001367",
+  "walletBaseUsdcBefore": "1.001367",
+  "approvedMaxPerOrderAtomic": "1330000",
+  "approvedMaxPerOrderUsdc": "1.33",
+  "approvedMaxTotalAtomic": "950000",
+  "approvedMaxTotalUsdc": "0.95",
+  "transactions": [
+    "0x456b10aaec7e5242c3210dc8d190c388547395629f27224b19a31b0cb73329f0"
+  ],
+  "results": [
+    {
+      "orderId": "46e3fb...[redacted]...b862",
+      "status": "onchain-payment-captured",
+      "ok": true,
+      "httpStatus": 200,
+      "amountAtomic": "950000",
+      "network": "base",
+      "transaction": "0x456b10aaec7e5242c3210dc8d190c388547395629f27224b19a31b0cb73329f0",
+      "paymentResponseHeaderPresent": true
+    }
+  ]
+}

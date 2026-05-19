@@ -1,0 +1,411 @@
+{
+  "generatedAt": "2026-05-19T22:12:53.187Z",
+  "status": "captured-synapse-explorer-read-only-snapshot",
+  "source": {
+    "explorer": "https://explorer.oobeprotocol.ai",
+    "docs": "https://explorer.oobeprotocol.ai/api-playground.html",
+    "openapi": "https://explorer.oobeprotocol.ai/openapi/v1.minimal.json"
+  },
+  "safety": {
+    "readOnly": true,
+    "usesApiKey": false,
+    "signsWallet": false,
+    "sendsTransaction": false,
+    "spendsFunds": false,
+    "publishesPublicly": false
+  },
+  "note": "Use this as a before/after read-only harness. Before SAP registration, Pablito should not appear in search/agent lists; after registration, the same script should capture the live agent identity.",
+  "results": {
+    "status": {
+      "route": "/api/v1/status",
+      "httpStatus": 200,
+      "ok": true,
+      "summary": {
+        "ok": true,
+        "error": null,
+        "meta": {
+          "requestId": "29ed979c-f631-4c8d-ac4c-103e64f4edfb",
+          "source": "internal",
+          "dataAgeMs": 0,
+          "warnings": [
+            "status:degraded"
+          ]
+        },
+        "dataShape": "object",
+        "dataCount": null,
+        "dataPreview": {
+          "status": "degraded",
+          "version": "1.0",
+          "timestamp": "2026-05-19T22:12:52.418Z",
+          "components": {
+            "database": {
+              "status": "ok",
+              "latencyMs": 1
+            },
+            "rpc": {
+              "status": "ok",
+              "latencyMs": 224
+            },
+            "indexer": {
+              "status": "stale",
+              "cursors": [
+                {
+                  "entity": "transactions_backfill",
+                  "lastSyncAgoSec": 3465737,
+                  "stale": true,
+                  "maxAgeSec": 900
+                },
+                {
+                  "entity": "metrics",
+                  "lastSyncAgoSec": 205,
+                  "stale": false,
+                  "maxAgeSec": 900
+                },
+                {
+                  "entity": "agents",
+                  "lastSyncAgoSec": 69981,
+                  "stale": true,
+                  "maxAgeSec": 900
+                },
+                {
+                  "entity": "transactions",
+                  "lastSyncAgoSec": 4,
+                  "stale": false,
+                  "maxAgeSec": 600
+                },
+                {
+                  "entity": "tools",
+                  "lastSyncAgoSec": 69979,
+                  "stale": true,
+                  "maxAgeSec": 900
+                },
+                {
+                  "entity": "escrows",
+                  "lastSyncAgoSec": 69976,
+                  "stale": true,
+                  "maxAgeSec": 900
+                },
+                {
+                  "entity": "attestations",
+                  "lastSyncAgoSec": 69974,
+                  "stale": true,
+                  "maxAgeSec": 900
+                },
+                {
+                  "entity": "feedbacks",
+                  "lastSyncAgoSec": 69972,
+                  "stale": true,
+                  "maxAgeSec": 900
+                },
+                {
+                  "entity": "vaults",
+                  "lastSyncAgoSec": 69969,
+                  "stale": true,
+                  "maxAgeSec": 900
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "networkMetrics": {
+      "route": "/api/v1/network/metrics",
+      "httpStatus": 200,
+      "ok": true,
+      "summary": {
+        "ok": true,
+        "error": null,
+        "meta": {
+          "requestId": "94282d18-fc8b-4847-83ad-ced52ec01fae",
+          "source": "cache",
+          "dataAgeMs": 0
+        },
+        "dataShape": "object",
+        "dataCount": null,
+        "dataPreview": {
+          "totalAgents": "44",
+          "activeAgents": "44",
+          "totalFeedbacks": "1",
+          "totalTools": 174,
+          "totalVaults": 4,
+          "totalAttestations": 0,
+          "totalCapabilities": 26,
+          "totalProtocols": 11,
+          "authority": "GBLQznn1QMnx64zHXcDguP9yNW9ZfYCVdrY8eDovBvPk",
+          "totalVolumeLamports": "432000",
+          "totalCallsSettled": "423",
+          "totalDeposited": "201380000",
+          "totalEscrowBalance": "29778000",
+          "activeEscrows": 4,
+          "fundedEscrows": 9,
+          "totalEscrows": 9,
+          "topAgentsByRevenue": [
+            {
+              "agentPda": "2vDfBLFAzn6e1Lgax4gHxdVXQJ6jkBjfMXz3TRtE4R16",
+              "totalSettled": "422000",
+              "totalCalls": "422",
+              "escrowCount": 1
+            },
+            {
+              "agentPda": "7sn2tfMxo4M47Q1DkKTCWGVDyTV3T2vDVWNWQdzNyq5m",
+              "totalSettled": "10000",
+              "totalCalls": "1",
+              "escrowCount": 1
+            }
+          ]
+        }
+      }
+    },
+    "agentsSample": {
+      "route": "/api/v1/agents?limit=5",
+      "httpStatus": 200,
+      "ok": true,
+      "summary": {
+        "ok": true,
+        "error": null,
+        "meta": {
+          "requestId": "da7ebbbc-3bda-4a28-91ea-d5b3925410ab",
+          "source": "db",
+          "dataAgeMs": 0,
+          "total": 5,
+          "limit": 5,
+          "hasMore": false
+        },
+        "dataShape": "array",
+        "dataCount": 5,
+        "dataPreview": [
+          {
+            "pda": "GTZNpoUacZrZU1PZfbzyyy34m1WizvUwE5aMfLXAf5hx",
+            "identity": {
+              "bump": 255,
+              "version": 1,
+              "wallet": "4aet1MhW5gbf46dqzrQB1qxGjM3Q3hN7ndKPRrntW5vg",
+              "name": "SURVIVOR Execution Agent",
+              "description": "SAP-native execution admissibility agent. Signed risk screening, escrow evaluation, proof adjudication.",
+              "agentId": "did:sap:survivor-execution-agent",
+              "agentUri": "https://survivor-oracle-production.up.railway.app",
+              "x402Endpoint": "https://survivor-oracle-production.up.railway.app/x402",
+              "isActive": true,
+              "createdAt": "2026-05-18T17:59:03.000Z",
+              "updatedAt": "2026-05-18T17:59:03.000Z",
+              "reputationScore": 0,
+              "totalFeedbacks": 0,
+              "reputationSum": "0",
+              "totalCallsServed": "0",
+              "avgLatencyMs": 0,
+              "uptimePercent": 100,
+              "capabilities": [
+                {
+                  "id": "survivor:risk-screen",
+                  "version": "1.0",
+                  "protocolId": "survivor",
+                  "description": "Token and transaction risk screening with signed attestation"
+                },
+                {
+                  "id": "survivor:escrow-evaluate",
+                  "version": "1.0",
+                  "protocolId": "survivor",
+                  "description": "Deterministic escrow evaluation and proof resolution"
+                },
+                {
+                  "id": "survivor:proof-adjudicate",
+                  "version": "1.0",
+                  "protocolId": "survivor",
+                  "description": "On-chain proof adjudication with audit trail"
+                },
+                {
+                  "id": "solana:token-analysis",
+                  "version": "1.0",
+                  "protocolId": "solana",
+                  "description": "Solana token structural analysis"
+                }
+              ],
+              "pricing": [],
+              "protocols": [
+                "survivor",
+                "solana",
+                "sap"
+              ],
+              "activePlugins": []
+            },
+            "stats": null,
+            "computed": {
+              "isActive": true,
+              "totalCalls": "0",
+              "reputationScore": 0,
+              "hasX402": true,
+              "capabilityCount": 4,
+              "pricingTierCount": 0,
+              "protocols": [
+                "survivor",
+                "solana",
+                "sap"
+              ]
+            }
+          },
+          {
+            "pda": "Az9rvsWc8FpTeBni5uPpuUeGxfkhj8ir64rFPHq8ck3K",
+            "identity": {
+              "bump": 255,
+              "version": 1,
+              "wallet": "CK9Rjh96bm9Cz6iBZ3RUBUSD7w78co8gdwZUc5nx3ukm",
+              "name": "MarketIntel-Agent",
+              "description": "Autonomous market intelligence agent. Uses Ace Data Cloud for search, analysis (GPT-4o-mini), and image generation (Midjourney).",
+              "agentId": null,
+              "agentUri": "https://github.com/oobe-bounty-agent",
+              "x402Endpoint": null,
+              "isActive": true,
+              "createdAt": "2026-05-18T13:45:40.000Z",
+              "updatedAt": "2026-05-18T13:45:40.000Z",
+              "reputationScore": 0,
+              "totalFeedbacks": 0,
+              "reputationSum": "0",
+              "totalCallsServed": "0",
+              "avgLatencyMs": 0,
+              "uptimePercent": 100,
+              "capabilities": [
+                {
+                  "id": "ace:search",
+                  "version": "1.0",
+                  "protocolId": "ace-data-cloud",
+                  "description": null
+                },
+                {
+                  "id": "ace:analysis",
+                  "version": "1.0",
+                  "protocolId": "ace-data-cloud",
+                  "description": null
+                },
+                {
+                  "id": "ace:image-gen",
+                  "version": "1.0",
+                  "protocolId": "ace-data-cloud",
+                  "description": null
+                }
+              ],
+              "pricing": [],
+              "protocols": [
+                "ace-data-cloud"
+              ],
+              "activePlugins": []
+            },
+            "stats": null,
+            "computed": {
+              "isActive": true,
+              "totalCalls": "0",
+              "reputationScore": 0,
+              "hasX402": false,
+              "capabilityCount": 3,
+              "pricingTierCount": 0,
+              "protocols": [
+                "ace-data-cloud"
+              ]
+            }
+          },
+          {
+            "pda": "E43iy2RokG393HA5tpRzJbSgBJAFb5rSjczVZJxQbbGF",
+            "identity": {
+              "bump": 255,
+              "version": 1,
+              "wallet": "BvUfZVu6SkBZ4GAEoMscWGEwB9SettjZB3hCLDUYoDXW",
+              "name": "Scout",
+              "description": "Autonomous market intelligence agent — ATLAS NEXUS by Athenaios",
+              "agentId": "nexus-scout-v2",
+              "agentUri": null,
+              "x402Endpoint": null,
+              "isActive": true,
+              "createdAt": "2026-05-18T05:07:29.000Z",
+              "updatedAt": "2026-05-18T05:07:29.000Z",
+              "reputationScore": 0,
+              "totalFeedbacks": 0,
+              "reputationSum": "0",
+              "totalCallsServed": "0",
+              "avgLatencyMs": 0,
+              "uptimePercent": 100,
+              "capabilities": [],
+              "pricing": [
+                {
+                  "tierId": "standard",
+                  "rateLimit": 60,
+                  "tokenMint": null,
+                  "tokenType": {
+                    "sol": {}
+                  },
+                  "burstLimit": null,
+                  "volumeCurve": null,
+                  "pricePerCall": "1000000",
+                  "tokenDecimals": 9,
+                  "settlementMode": {
+                    "escrow": {}
+                  },
+                  "maxPricePerCall": null,
+                  "minPricePerCall": null,
+                  "batchIntervalSec": null,
+                  "minEscrowDeposit": "10000000",
+                  "maxCallsPerSession": 1000
+                }
+              ],
+              "protocols": [
+                "x402"
+              ],
+              "activePlugins": []
+            },
+            "stats": null,
+            "computed": {
+              "isActive": true,
+              "totalCalls": "0",
+              "reputationScore": 0,
+              "hasX402": false,
+              "capabilityCount": 0,
+              "pricingTierCount": 1,
+              "protocols": [
+                "x402"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "capabilitySearch": {
+      "route": "/api/v1/agents?capability=workflow%3Aclassify&limit=20",
+      "httpStatus": 200,
+      "ok": true,
+      "summary": {
+        "ok": true,
+        "error": null,
+        "meta": {
+          "requestId": "6a7306fe-6724-4ba0-bb13-472412e3dbfc",
+          "source": "db",
+          "dataAgeMs": 0,
+          "total": 0,
+          "limit": 20,
+          "hasMore": false
+        },
+        "dataShape": "array",
+        "dataCount": 0,
+        "dataPreview": []
+      }
+    },
+    "nameSearch": {
+      "route": "/api/v1/search?q=Pablito%20Settlement%20Sentinel&limit=20",
+      "httpStatus": 200,
+      "ok": true,
+      "summary": {
+        "ok": true,
+        "error": null,
+        "meta": {
+          "requestId": "a5564569-f36b-46c2-8ea5-5126e2440485",
+          "source": "db",
+          "dataAgeMs": 0,
+          "total": 0,
+          "limit": 20,
+          "hasMore": false
+        },
+        "dataShape": "array",
+        "dataCount": 0,
+        "dataPreview": []
+      }
+    }
+  }
+}

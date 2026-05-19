@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-05-19T22:25:51.143Z",
+  "status": "no-sign-rehearsal-complete-live-proof-still-missing",
+  "summary": "This artifact turns the live path into exact preview commands and approval gates. It does not create bounty-valid live evidence.",
+  "safety": {
+    "signsWallet": false,
+    "sendsTransaction": false,
+    "connectsWallet": false,
+    "spendsFunds": false,
+    "createsAccount": false,
+    "publishesPublicly": false,
+    "submitsBounty": false,
+    "mutatesNetwork": false
+  },
+  "chosenPathRecommendation": {
+    "primary": "Ace Data Cloud category if three real Ace services can be used cheaply and safely",
+    "fallback": "General SAP route with Synapse Sentinel if Ace service access is unclear",
+    "routeDefault": "normal public Superteam route unless sponsor/platform confirms an agent/API route"
+  },
+  "currentResearchNotes": [
+    "AceDataCloud docs describe x402 payments through platform.acedata.cloud orders on Base mainnet USDC.",
+    "Ace x402 flow needs a platform token, order id, HTTP 402 requirements, an X-PAYMENT signature, retry, and X-PAYMENT-RESPONSE receipt capture.",
+    "This repo now has a no-spend Ace requirements preview script that can capture the first HTTP 402 requirements response when ACE_PLATFORM_TOKEN and ACE_X402_ORDER_ID are supplied through environment variables.",
+    "Ace examples use exported EVM signing material; this repo must use a managed signer path instead of storing raw signing secrets.",
+    "OOBE Synapse client SDK docs show AgentGateway, X402Paywall/X402BuyerClient, facilitator lookup, and Solana agent plugin tooling."
+  ],
+  "exactNoSignCommands": [
+    "npm view @oobe-protocol-labs/synapse-sap-sdk version dist-tags --json",
+    "mkdir -p /tmp/oobe-sap-sdk-inspection",
+    "npm pack @oobe-protocol-labs/synapse-sap-sdk@0.17.0 --ignore-scripts --pack-destination /tmp/oobe-sap-sdk-inspection",
+    "npm run proof:sap-preview",
+    "npm run proof:live-rehearsal",
+    "npm run proof:ace-x402-preview",
+    "npm run verify:prep"
+  ],
+  "evidencePathsCreated": [
+    "proof/sap-registration.preview.latest.json",
+    "proof/live-rehearsal.no-sign.latest.json",
+    "proof/ace-x402-requirements.preview.latest.json",
+    "proof/live-execution-approval-packet.draft.md"
+  ],
+  "proofGates": [
+    {
+      "id": "sap_mainnet_identity",
+      "targetProof": "SAP mainnet agent identity / registration evidence",
+      "currentState": "registration arguments previewed only; no wallet/provider connected",
+      "previewCommand": "npm run proof:sap-preview",
+      "approvalBeforeLive": "Explicit approval for wallet provider, network, max SOL fee/rent, exact SDK command, and evidence capture path",
+      "currentBlockers": []
+    },
+    {
+      "id": "ace_data_cloud_usage",
+      "targetProof": "Three distinct Ace Data Cloud service calls if pursuing Ace category",
+      "currentState": "captured 15 distinct Ace service proofs: gemini_chat, kling-video-generation, localization-translate, midjourney-generation, nano-banana-image-generation, openai-chat-completions, openai-embeddings, openai-responses, openai_chat, seedream-image-generation, serp-google-search, serp_google, short-url, suno-music-generation, veo-video-generation",
+      "previewCommand": "record official service names, allowed inputs, cost/credit rules, and proof format before live use",
+      "approvalBeforeLive": "Explicit approval for account route, selected services, input data, cost cap, and proof capture",
+      "currentBlockers": [
+        "No additional Ace services needed for the exact three-service requirement unless sponsor asks for paid-order evidence per service.",
+        "Need one clean end-to-end live run tying service usage to SAP/tool selection and payment evidence."
+      ]
+    },
+    {
+      "id": "synapse_sentinel_usage",
+      "targetProof": "Synapse Sentinel usage if pursuing general category",
+      "currentState": "not used live; still a route/service confirmation item",
+      "previewCommand": "document official Sentinel call route and evidence output before live use",
+      "approvalBeforeLive": "Explicit approval for service call, input data, cost cap, and proof capture",
+      "currentBlockers": [
+        "Need official Sentinel endpoint/UI path",
+        "Need accepted proof format"
+      ]
+    },
+    {
+      "id": "x402_sap_settlement",
+      "targetProof": "Real non-wash x402/SAP settlement proof",
+      "currentState": "headers/costs modeled locally; no escrow/facilitator/payment call performed",
+      "previewCommand": "derive quote/prepare/settle route from pinned SDK or facilitator docs, then stop before payment",
+      "approvalBeforeLive": "Explicit approval for payer/payee, asset, amount, route, max loss, and non-wash rationale",
+      "currentBlockers": [
+        "Need deployed real service/resource endpoint",
+        "Need payer/payee addresses and cost cap",
+        "Need facilitator/escrow route that does not create circular artificial volume",
+        "Ace x402 route appears to use Base USDC order payment and X-PAYMENT-RESPONSE receipt capture",
+        "First safe live-prep checkpoint is proof/ace-x402-requirements.preview.latest.json from the initial 402 response"
+      ]
+    }
+  ],
+  "stillNotDone": [
+    "No SAP mainnet registration transaction",
+    "No Synapse Sentinel service usage",
+    "No real x402/SAP settlement",
+    "No single clean end-to-end live autonomous run tying trigger, SAP/tool selection, service execution, payment, and deliverable together",
+    "No public repo",
+    "No X walkthrough post",
+    "No Superteam final submission"
+  ]
+}

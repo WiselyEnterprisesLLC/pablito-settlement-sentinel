@@ -1,0 +1,95 @@
+{
+  "generatedAt": "2026-05-19T22:25:53.096Z",
+  "status": "race-mode-needed-asap",
+  "premise": "This is ranked by real usage/activity. Qualifying is not enough; the strongest path is to get live, public, and legitimately active quickly.",
+  "deadline": {
+    "utc": "2026-06-03T21:59:59.999Z",
+    "daysLeftApprox": 15,
+    "note": "Refresh the live listing before final submission."
+  },
+  "currentReadiness": {
+    "competitivePercent": 70,
+    "publicExportRedFlags": 0,
+    "publicExportPlaceholderFiles": 0,
+    "aceCategory": {
+      "sapMainnetRegistration": {
+        "status": "satisfied-live-proof",
+        "required": true,
+        "evidence": "SAP registration transaction captured: 33mbTuPhn31CXNC1XAViiCHFqXZFohiUGr8uzhXrHSSkEhKdwDidV65NHEo6uCod1fa7nLgmqw557bHRgzLU9jxN.",
+        "nextAction": "Attach proof/sap-registration.live.latest.json and proof/sap-identity-status.latest.json; keep refreshing Explorer indexing snapshots."
+      },
+      "completeAutomatedWorkflow": {
+        "status": "satisfied-live-proof",
+        "required": true,
+        "evidence": "Atomic live run captured: oobe-ace-live-run-20260519T221510Z.",
+        "nextAction": "Attach proof/end-to-end-live-run.latest.json and public deliverable hash."
+      },
+      "aceAccount": {
+        "status": "functionally-satisfied-private-account-not-published",
+        "required": true,
+        "evidence": "Successful Ace API service proofs imply an Ace account/API credential was used; account details are intentionally private.",
+        "nextAction": "Do not publish account details; cite service proof summaries only."
+      },
+      "x402AceFacilitatorWithSynapseRpc": {
+        "status": "satisfied-three-base-proofs",
+        "required": true,
+        "evidence": "Three Ace x402 Base payment proofs captured; SAP identity is registered.",
+        "nextAction": "Attach proof/ace-x402-onchain-batch.latest.json."
+      },
+      "threeDistinctAceServices": {
+        "status": "satisfied",
+        "required": true,
+        "evidence": "Captured distinct services: gemini_chat, kling-video-generation, localization-translate, midjourney-generation, nano-banana-image-generation, openai-chat-completions, openai-embeddings, openai-responses, openai_chat, seedream-image-generation, serp-google-search, serp_google, short-url, suno-music-generation, veo-video-generation.",
+        "nextAction": "No more Ace services needed unless sponsor asks for paid-order evidence per service."
+      }
+    }
+  },
+  "racePriorities": [
+    {
+      "id": "p0_sap_identity",
+      "urgency": "immediate",
+      "action": "Complete SAP mainnet identity proof with explorer/API snapshot.",
+      "whyItMatters": "Without SAP mainnet identity, the submission remains structurally incomplete.",
+      "approvalGate": "Wallet/provider, fee/rent cap, preview first, then separate approval before any signature or broadcast."
+    },
+    {
+      "id": "p1_atomic_run",
+      "urgency": "immediate-after-sap",
+      "action": "Capture one atomic live run with one request id from trigger through deliverable.",
+      "whyItMatters": "This converts separate evidence into the complete autonomous workflow the listing asks for.",
+      "approvalGate": "Service calls, any new payment, and any live signing/spend remain separately approved."
+    },
+    {
+      "id": "p2_public_proof",
+      "urgency": "same-day-after-run",
+      "action": "Publish the scoped repo and X walkthrough after final private-data review.",
+      "whyItMatters": "Judges need a clean public artifact and proof narrative; public visibility also helps credibility.",
+      "approvalGate": "Exact repo action, X copy, and Superteam body approval."
+    },
+    {
+      "id": "p3_legitimate_usage",
+      "urgency": "daily-until-deadline",
+      "action": "Run additional useful Ace workflows only where each run produces a real deliverable and proof bundle.",
+      "whyItMatters": "The category rewards highest real Ace usage, not a one-time minimum.",
+      "approvalGate": "Budget cap and allowed service list for each usage batch."
+    }
+  ],
+  "antiDisqualificationRules": [
+    "No artificial loops.",
+    "No circular self-payment presented as market demand.",
+    "No API spam.",
+    "No private customer/user data in public artifacts.",
+    "Each usage run should have a reason, service list, output hash, and payment/evidence reference."
+  ],
+  "recommendedCadenceAfterLiveGates": {
+    "lightBudget": "2 legitimate workflow runs/day",
+    "mediumBudget": "4 legitimate workflow runs/day",
+    "aggressiveButClean": "6 legitimate workflow runs/day only if costs stay tiny and every run has a distinct useful deliverable"
+  },
+  "nextUnblockedLocalWork": [
+    "Keep public proof page and reviewer index current.",
+    "Keep usage queue ready with public-safe input tasks.",
+    "Keep submission/X copy ready but unposted.",
+    "Re-run verify:prep after every new evidence artifact."
+  ]
+}

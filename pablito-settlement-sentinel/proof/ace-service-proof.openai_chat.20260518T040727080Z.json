@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-05-18T04:07:27.080Z",
+  "status": "captured-ace-api-service-proof",
+  "serviceId": "openai_chat",
+  "safety": {
+    "storesApiToken": false,
+    "storesRawResponse": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "publishesPublicly": false
+  },
+  "notes": [
+    "API token was provided through process env/stdin wrapper only.",
+    "Stored proof is a public-safe summary, not the raw provider response.",
+    "This proves service execution only if httpStatus is 2xx and ok is true."
+  ],
+  "ok": true,
+  "httpStatus": 200,
+  "serviceLabel": "Ace OpenAI-compatible chat completion",
+  "docs": "https://docs.acedata.cloud/en/guides/openai/openai_chat_completions",
+  "endpoint": "https://api.acedata.cloud/openai/chat/completions",
+  "requestShape": {
+    "method": "POST",
+    "bodyKeys": [
+      "max_tokens",
+      "messages",
+      "model",
+      "temperature"
+    ],
+    "model": "gpt-4o-mini"
+  },
+  "responseSummary": {
+    "topLevelKeys": [
+      "choices",
+      "created",
+      "id",
+      "model",
+      "object",
+      "prompt_filter_results",
+      "service_tier",
+      "system_fingerprint",
+      "usage"
+    ],
+    "id": "chatcmpl-DgjYEmiDzZFzpuh5W0nqZPTHarxeS",
+    "model": "gpt-4o-mini",
+    "usage": {
+      "completion_tokens": 30,
+      "completion_tokens_details": {
+        "accepted_prediction_tokens": 0,
+        "audio_tokens": 0,
+        "reasoning_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "latency_checkpoint": {
+        "engine_tbt_ms": 5,
+        "engine_ttft_ms": 25,
+        "engine_ttlt_ms": 181,
+        "pre_inference_ms": 78,
+        "service_tbt_ms": 5,
+        "service_ttft_ms": 358,
+        "service_ttlt_ms": 496,
+        "total_duration_ms": 415,
+        "user_visible_ttft_ms": 281
+      },
+      "prompt_tokens": 30,
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0
+      },
+      "total_tokens": 60
+    },
+    "choices": [
+      {
+        "index": 0,
+        "finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "```json\n{\n  \"category\": \"Lead Management\",\n  \"next_step\": \"Implement automated follow-up reminders for first replies\"\n}\n```"
+        }
+      }
+    ],
+    "organicResults": null,
+    "preview": null
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "generatedAt": "2026-05-19T07:19:10.015Z",
+  "status": "captured-ace-api-service-proof",
+  "serviceId": "short-url",
+  "safety": {
+    "storesApiToken": false,
+    "storesRawResponse": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "publishesPublicly": false,
+    "unsafeFamiliesSkipped": [
+      "captcha",
+      "identity",
+      "proxy"
+    ]
+  },
+  "notes": [
+    "API token was provided through environment/stdin wrapper only.",
+    "Stored proof is a public-safe summary, not the raw provider response.",
+    "This proves service execution only if httpStatus is 2xx and ok is true."
+  ],
+  "ok": true,
+  "httpStatus": 200,
+  "serviceLabel": "Short URL",
+  "family": "web-data",
+  "docs": "https://docs.acedata.cloud/en/guides/shorturl",
+  "endpoint": "https://api.acedata.cloud/shorturl",
+  "elapsedMs": 253,
+  "requestShape": {
+    "method": "POST",
+    "bodyKeys": [
+      "content"
+    ],
+    "model": null
+  },
+  "responseSummary": {
+    "topLevelKeys": [
+      "data",
+      "success"
+    ],
+    "id": null,
+    "model": null,
+    "usage": null,
+    "mediaUrls": [],
+    "preview": "{\"success\":true,\"data\":{\"url\":\"https://surl.id/r/1uNbNGbrCz\"}}"
+  }
+}

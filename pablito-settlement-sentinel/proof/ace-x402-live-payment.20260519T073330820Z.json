@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-05-19T07:33:30.820Z",
+  "status": "blocked-unexpected-ace-response",
+  "approvalId": "appr_20260518022742_wg7log",
+  "safety": {
+    "createsAccount": false,
+    "usesManagedSigner": true,
+    "storesSignerSecret": false,
+    "storesPlatformToken": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "retriesPayment": false,
+    "spendsFunds": false
+  },
+  "source": {
+    "docs": "https://docs.acedata.cloud/en/guides/x402",
+    "coinbaseBuyerDocs": "https://docs.cdp.coinbase.com/x402/quickstart-for-buyers",
+    "apiBase": "https://platform.acedata.cloud",
+    "endpointShape": "POST /api/v1/orders/{order_id}/pay/ with { \"pay_way\": \"X402\" }"
+  },
+  "notes": [
+    "Initial Ace request did not return 402 payment requirements. No signature, retry, or payment was attempted."
+  ],
+  "ok": false,
+  "orderId": "a1cc2a...[redacted]...b6c1",
+  "httpStatus": 400,
+  "responsePublicSummary": {
+    "topLevelKeys": [
+      "code",
+      "detail",
+      "trace_id"
+    ],
+    "fields": {
+      "code": "invalid"
+    }
+  },
+  "executeRequested": false
+}

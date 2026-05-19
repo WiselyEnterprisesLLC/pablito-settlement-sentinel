@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-05-19T21:40:18.665Z",
+  "status": "ready-preflight-no-execute",
+  "approvalId": "appr_20260518022742_wg7log",
+  "safety": {
+    "createsAccount": false,
+    "usesManagedSigner": true,
+    "storesSignerSecret": false,
+    "storesPlatformToken": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "retriesPayment": false,
+    "spendsFunds": false
+  },
+  "source": {
+    "docs": "https://docs.acedata.cloud/en/guides/x402",
+    "coinbaseBuyerDocs": "https://docs.cdp.coinbase.com/x402/quickstart-for-buyers",
+    "apiBase": "https://platform.acedata.cloud",
+    "endpointShape": "POST /api/v1/orders/{order_id}/pay/ with { \"pay_way\": \"X402\" }"
+  },
+  "notes": [],
+  "ok": true,
+  "orderId": "f1bac6...[redacted]...9939",
+  "payerAddress": "0x122c67ad0DD3bA27bfCaCcCD9aFd9c3fd99216Fa",
+  "requirement": {
+    "scheme": "exact",
+    "network": "base",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "maxAmountRequired": "950000",
+    "payTo": "0x4F0E2D3477a1B94CF33d16E442CEe4733dadCeE7",
+    "extraKeys": [
+      "name",
+      "version"
+    ]
+  },
+  "amountAtomic": "950000",
+  "amountUsdc": "0.95",
+  "preflightBlockers": [],
+  "walletBaseUsdcAtomic": "1042155",
+  "walletBaseUsdc": "1.042155",
+  "executeRequested": false,
+  "approvalEnvMatches": false,
+  "approvedMaxPerOrderAtomic": "1330000",
+  "approvedMaxPerOrderUsdc": "1.33",
+  "approvedMaxTotalAtomic": "3990000",
+  "approvedMaxTotalUsdc": "3.99",
+  "nextAction": "Set ACE_X402_EXECUTE=true and ACE_X402_LIVE_APPROVAL to the approval id to perform the approved payment batch."
+}

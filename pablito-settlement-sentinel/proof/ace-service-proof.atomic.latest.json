@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-05-19T22:15:13.977Z",
+  "ok": true,
+  "status": "captured-atomic-ace-service-proof",
+  "serviceId": "openai_chat_atomic",
+  "serviceLabel": "Ace OpenAI-compatible chat completion for atomic live run",
+  "endpoint": "https://api.acedata.cloud/openai/chat/completions",
+  "httpStatus": 200,
+  "requestId": "oobe-ace-live-run-20260519T221510Z",
+  "requestShape": {
+    "method": "POST",
+    "bodyKeys": [
+      "max_tokens",
+      "messages",
+      "model",
+      "temperature"
+    ],
+    "model": "gpt-4o-mini"
+  },
+  "responseSummary": {
+    "topLevelKeys": [
+      "choices",
+      "created",
+      "id",
+      "model",
+      "object",
+      "service_tier",
+      "system_fingerprint",
+      "usage"
+    ],
+    "model": "gpt-4o-mini",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 67,
+      "total_tokens": 144,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "audio_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "audio_tokens": 0,
+        "accepted_prediction_tokens": 0,
+        "rejected_prediction_tokens": 0
+      },
+      "latency_checkpoint": {
+        "service_ttft_ms": 657,
+        "user_visible_ttft_ms": 570,
+        "total_duration_ms": 1406,
+        "pre_inference_ms": 87,
+        "service_tbt_ms": 12,
+        "service_ttlt_ms": 1452,
+        "engine_ttft_ms": 29,
+        "engine_ttlt_ms": 827,
+        "engine_tbt_ms": 12
+      }
+    },
+    "content": "{\n  \"workflow_leak_classification\": \"Lead Management Inefficiency\",\n  \"automation_step\": {\n    \"description\": \"Implement a centralized CRM system that automatically routes form submissions to a designated owner and tracks follow-up tasks.\",\n    \"benefit\": \"Ensures timely responses and accountability for lead management.\"\n  }\n}"
+  },
+  "safety": {
+    "storesApiToken": false,
+    "storesRawResponse": false,
+    "containsPrivateData": false,
+    "publishesPublicly": false
+  }
+}

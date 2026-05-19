@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-05-19T22:13:37.968Z",
+  "status": "registered-live-identity-found",
+  "safety": {
+    "readOnly": true,
+    "signsWallet": false,
+    "sendsTransaction": false,
+    "spendsFunds": false,
+    "publishesPublicly": false,
+    "storesSecrets": false
+  },
+  "searchedFor": {
+    "name": "Pablito Settlement Sentinel",
+    "agentId": "did:sap:pablito-settlement-sentinel",
+    "agentUri": "https://wiselyenterprisesllc.com/oobe-ace/pablito-settlement-sentinel.metadata.json",
+    "x402Endpoint": "https://wiselyenterprisesllc.com/.well-known/x402/pablito-settlement-sentinel.json",
+    "capabilityIds": [
+      "workflow:classify",
+      "x402:settlement-proof"
+    ]
+  },
+  "snapshotFile": "proof/synapse-explorer-snapshot.latest.json",
+  "explorerStatus": "captured-synapse-explorer-read-only-snapshot",
+  "explorerNameSearchCount": 0,
+  "explorerCapabilitySearchCount": 0,
+  "liveRegistration": {
+    "evidenceFile": "proof/sap-registration.live.latest.json",
+    "status": "registered-sap-mainnet-identity",
+    "signature": "33mbTuPhn31CXNC1XAViiCHFqXZFohiUGr8uzhXrHSSkEhKdwDidV65NHEo6uCod1fa7nLgmqw557bHRgzLU9jxN",
+    "explorerUrl": "https://explorer.solana.com/tx/33mbTuPhn31CXNC1XAViiCHFqXZFohiUGr8uzhXrHSSkEhKdwDidV65NHEo6uCod1fa7nLgmqw557bHRgzLU9jxN",
+    "wallet": "HE9MYDzoLAgnwbRXbiWRGGvoE2QE9LqKdQGJhNLPxtVj",
+    "agentPda": "Ayq45yjQA8atLZVQ3o8BJQwSopxa3EFzFVsMxRP75WJV",
+    "agentStatsPda": "7XwmcLbhJuJFAsFaXQUJhfj5dkZHh7PJnt2PVhw7tz87",
+    "spentLamports": "40429180",
+    "spentSol": 0.04042918
+  },
+  "matchingHits": [],
+  "readinessStatus": "ready-for-controlled-no-send-registration-preview",
+  "nextAction": "SAP mainnet transaction is registered and locally verified; explorer index search has not caught up yet. Use the transaction/PDA proof and keep refreshing explorer snapshots."
+}

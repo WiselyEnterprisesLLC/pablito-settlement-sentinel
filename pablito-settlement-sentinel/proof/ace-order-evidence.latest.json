@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-05-18T03:11:11.698Z",
+  "status": "captured-ace-order-api-evidence",
+  "source": {
+    "docs": "https://docs.acedata.cloud/en/guides/x402",
+    "apiBase": "https://platform.acedata.cloud",
+    "endpointShape": "GET /api/v1/orders/{order_id}/ with Authorization: Bearer {platform_token}"
+  },
+  "safety": {
+    "storesPlatformToken": false,
+    "storesRawOrderResponse": false,
+    "usesPersonalFiatFunding": false,
+    "signsPayment": false,
+    "spendsFunds": false,
+    "publishesPublicly": false
+  },
+  "notes": [
+    "Platform token was provided through process env/stdin wrapper only.",
+    "Stored proof is public-safe summary data, not the raw platform response.",
+    "Order state FINISHED or PAID is the documented API verification signal for successful x402 payment."
+  ],
+  "ok": false,
+  "httpStatus": 500,
+  "orderId": "a1cc2a8e-a8aa-468a-bd51-2b04ae15b6c1",
+  "documentedPaymentStateSatisfied": false,
+  "orderState": null,
+  "summary": null,
+  "responsePreviewIfNonJson": "\n<!doctype html>\n<html lang=\"en\">\n<head>\n  <title>Server Error (500)</title>\n</head>\n<body>\n  <h1>Server Error (500)</h1><p></p>\n</body>\n</html>\n"
+}

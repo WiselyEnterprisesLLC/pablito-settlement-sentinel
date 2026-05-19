@@ -1,0 +1,128 @@
+{
+  "generatedAt": "2026-05-19T22:25:50.814Z",
+  "status": "no-sign-no-provider-live-gate-plan",
+  "bountyValidity": "not live bounty proof; use this to request exact approval before a wallet/provider is connected",
+  "safety": {
+    "connectsWallet": false,
+    "signsWallet": false,
+    "sendsTransaction": false,
+    "spendsFunds": false,
+    "mutatesNetwork": false,
+    "storesSecretMaterial": false
+  },
+  "sdk": {
+    "package": "@oobe-protocol-labs/synapse-sap-sdk",
+    "version": "0.17.0",
+    "inspectedVia": "npm view + npm pack --ignore-scripts + dist/esm/*.d.ts",
+    "mutatingSdkCallsNotUsed": [
+      "SapClient.sendTransaction",
+      "client.agent.register",
+      "client.x402.preparePayment",
+      "client.x402.settle",
+      "client.escrowV2.create",
+      "client.escrowV2.deposit"
+    ],
+    "programAddress": "SAPpUhsWLJG1FfkGRcXagEDMrMsWGjbky7AyhGpFETZ",
+    "inspectedFiles": [
+      "dist/esm/modules/agent.d.ts",
+      "dist/esm/instructions/agent.d.ts",
+      "dist/esm/types/instructions.d.ts",
+      "dist/esm/types/common.d.ts",
+      "dist/esm/types/enums.d.ts",
+      "dist/esm/constants/programs.d.ts"
+    ]
+  },
+  "network": "solana:mainnet-beta",
+  "candidateWallet": "HE9MYDzoLAgnwbRXbiWRGGvoE2QE9LqKdQGJhNLPxtVj",
+  "liveInstructionShape": {
+    "highLevelCall": "client.agent.register with registerAgentArgs",
+    "lowLevelInstruction": "instructions.agent.registerAgent(ctx)",
+    "requiredAccountsFromDts": [
+      "signer",
+      "wallet",
+      "agent",
+      "agentStats",
+      "globalRegistry"
+    ],
+    "requiredArgsFromDts": [
+      "name",
+      "description",
+      "capabilities",
+      "pricing",
+      "protocols",
+      "agentId",
+      "agentUri",
+      "x402Endpoint"
+    ],
+    "derivedPdasNeededBeforeSign": [
+      "deriveAgent(wallet)",
+      "deriveAgentStats(agent)",
+      "deriveGlobalRegistry()"
+    ]
+  },
+  "registerAgentArgs": {
+    "name": "Pablito Settlement Sentinel",
+    "description": "Autonomous workflow sentinel: discovers workflow-analysis tools, executes a bounded AI classification task, and produces x402/SAP settlement proof. Demo-safe; no private data.",
+    "capabilities": [
+      {
+        "id": "workflow:classify",
+        "description": "Classify a small business workflow bottleneck and return one automation-ready next step.",
+        "protocolId": "sap",
+        "version": "0.1.0"
+      },
+      {
+        "id": "x402:settlement-proof",
+        "description": "Create a public-safe settlement proof object for a completed agent workflow.",
+        "protocolId": "x402",
+        "version": "0.1.0"
+      }
+    ],
+    "pricing": [
+      {
+        "tierId": "demo",
+        "pricePerCall": "1000",
+        "minPricePerCall": null,
+        "maxPricePerCall": null,
+        "rateLimit": 60,
+        "maxCallsPerSession": 100,
+        "burstLimit": null,
+        "tokenType": {
+          "sol": {}
+        },
+        "tokenMint": null,
+        "tokenDecimals": 9,
+        "settlementMode": {
+          "x402": {}
+        },
+        "minEscrowDeposit": null,
+        "batchIntervalSec": null,
+        "volumeCurve": null
+      }
+    ],
+    "protocols": [
+      "SAP",
+      "x402"
+    ],
+    "agentId": "did:sap:pablito-settlement-sentinel",
+    "agentUri": "https://wiselyenterprisesllc.com/oobe-ace/pablito-settlement-sentinel.metadata.json",
+    "x402Endpoint": "https://wiselyenterprisesllc.com/.well-known/x402/pablito-settlement-sentinel.json"
+  },
+  "blockersBeforeWalletPreview": [
+    "Confirm the candidate Solana wallet is the funded/controlled agent wallet for SAP registration.",
+    "Estimate mainnet rent/fee after provider connection but before signing.",
+    "Get explicit approval for wallet/provider connection and no-send transaction preview.",
+    "Do not use this as bounty-valid proof until transaction signature and explorer/Synapse evidence are captured."
+  ],
+  "exactNextGateRequest": {
+    "action": "Connect Solana provider for no-send SAP registration transaction simulation only",
+    "network": "solana:mainnet-beta",
+    "wallet": "HE9MYDzoLAgnwbRXbiWRGGvoE2QE9LqKdQGJhNLPxtVj",
+    "programAddress": "SAPpUhsWLJG1FfkGRcXagEDMrMsWGjbky7AyhGpFETZ",
+    "hardStops": [
+      "stop before wallet signature",
+      "stop before transaction send",
+      "stop if rent/fee estimate exceeds approved cap",
+      "stop if SDK args differ from proof/sap-live-gate.latest.json"
+    ]
+  }
+}
