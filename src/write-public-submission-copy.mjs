@@ -29,10 +29,12 @@ const atomicRequestId = e2eLive?.requestId || 'pending';
 const repoUrl = publicSummary?.repositoryUrl || 'pending public URL';
 const commitHash = publicSummary?.repositoryCommit || 'pending commit hash';
 const proofPageUrl = 'https://wiselyenterprisesllc.com/oobe-ace/proof';
+const xPostUrl = process.env.X_POST_URL || 'pending approved X or video URL';
+const xPostPublished = /^https:\/\/x\.com\/Pablito_WE\/status\/\d+$/i.test(xPostUrl);
 
 const xDraft = `# X Walkthrough Draft
 
-Status: draft only. Do not post until the public repo is reviewed and Paul approves the exact public text.
+Status: ${xPostPublished ? `posted at ${xPostUrl}` : 'draft only. Do not post until the public repo is reviewed and Paul approves the exact public text.'}
 
 ## Strong Thread Draft
 
@@ -141,7 +143,7 @@ Current competitive readiness score: ${scorecard?.score?.percent ?? 'pending'}%.
 - Ace service proof files: ${repoUrl}/tree/main/proof
 - SAP registration evidence: ${sapTx}
 - Atomic live-run evidence: ${atomicRequestId}
-- Demo/walkthrough: pending approved X or video URL
+- Demo/walkthrough: ${xPostUrl}
 
 ## Safe Claim Language
 

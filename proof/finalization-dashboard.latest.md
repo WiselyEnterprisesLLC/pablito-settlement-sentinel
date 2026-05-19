@@ -1,6 +1,6 @@
 # OOBE x Ace Finalization Dashboard
 
-Generated: 2026-05-19T22:42:02.633Z
+Generated: 2026-05-19T23:07:04.678Z
 
 Verdict: **not-final-yet**
 
@@ -25,7 +25,7 @@ Strongest route: **Ace Data Cloud Usage category**
 - SAP mainnet identity captured: true
 - Atomic live run captured: true
 - Public repo published: true
-- X walkthrough posted: false
+- X walkthrough posted: true
 - Superteam submitted: false
 
 ## Gates
@@ -39,7 +39,7 @@ Strongest route: **Ace Data Cloud Usage category**
 | SAP mainnet identity | registered | no | Keep SAP transaction/PDA proof attached; keep refreshing explorer/API search until it indexes. |
 | Single atomic live run | captured | no | Review end-to-end-live-run.20260519T221510Z.json and re-run publication checks. |
 | Public GitHub repo | published | no | Fill the final repo URL and commit hash in submission drafts. |
-| X walkthrough | draft-only | yes | Post only after public repo and final proof links are accurate and approved. |
+| X walkthrough | posted | no | Attach post URL to the Superteam submission. |
 | Superteam final submission | not-submitted | yes | Submit after repo, X walkthrough, and final evidence are ready and approved. |
 
 ## Next Move Order

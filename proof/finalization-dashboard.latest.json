@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T22:42:02.633Z",
+  "generatedAt": "2026-05-19T23:07:04.678Z",
   "listing": {
     "title": "Autonomous Agent Bounty: OOBE x Ace Data Cloud",
     "url": "https://superteam.fun/earn/listing/autonomous-agent-bounty-oobe-ace-data-cloud/",
@@ -23,7 +23,7 @@
     "sapMainnetIdentityCaptured": true,
     "atomicLiveRunCaptured": true,
     "publicRepoPublished": true,
-    "xWalkthroughPosted": false,
+    "xWalkthroughPosted": true,
     "superteamSubmitted": false,
     "publicMetadataReachable": "all-public-urls-readable",
     "sapIdentityStatus": "registered-live-identity-found"
@@ -110,9 +110,9 @@
     {
       "id": "x_walkthrough",
       "label": "X walkthrough",
-      "status": "draft-only",
-      "approvalRequired": true,
-      "nextAction": "Post only after public repo and final proof links are accurate and approved.",
+      "status": "posted",
+      "approvalRequired": false,
+      "nextAction": "Attach post URL to the Superteam submission.",
       "evidence": [
         "proof/x-walkthrough-draft.md"
       ]
@@ -129,7 +129,6 @@
     }
   ],
   "criticalMissing": [
-    "x_walkthrough",
     "superteam_submission"
   ],
   "nextMoveOrder": [

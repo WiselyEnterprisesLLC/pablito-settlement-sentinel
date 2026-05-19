@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T22:39:28.173Z",
+  "generatedAt": "2026-05-19T23:07:04.096Z",
   "listing": {
     "id": "66842d34-5ed4-474f-9844-dbbcfcad7ad3",
     "title": "Autonomous Agent Bounty: OOBE × Ace Data Cloud",
@@ -30,14 +30,14 @@
     "publicGithubRepository": {
       "status": "published",
       "required": true,
-      "evidence": "Public repository is live: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel; commit: 2983714724dc8fca3244a5753fa7e5ee383e7672.",
+      "evidence": "Public repository is live: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel; commit: 35e9d00c325c498d743ac2d82b1ce02962b546dd.",
       "nextAction": "Use repo URL/commit in X walkthrough and Superteam submission."
     },
     "xSubmissionPost": {
-      "status": "missing-public-post",
+      "status": "posted",
       "required": true,
-      "evidence": "X walkthrough draft exists, but no public post has been made.",
-      "nextAction": "After public repo exists, approve and post walkthrough tagging @OOBEonSol and @AceDataCloud."
+      "evidence": "X walkthrough post is live: https://x.com/Pablito_WE/status/2056873797232591067.",
+      "nextAction": "Use the X post URL in the Superteam submission."
     },
     "demoWalkthrough": {
       "status": "draft-ready-needs-public-link",
@@ -144,7 +144,7 @@
     "xPostMustShareGithubRepo": {
       "status": "published",
       "required": true,
-      "evidence": "Public repository is live: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel; commit: 2983714724dc8fca3244a5753fa7e5ee383e7672.",
+      "evidence": "Public repository is live: https://github.com/WiselyEnterprisesLLC/pablito-settlement-sentinel; commit: 35e9d00c325c498d743ac2d82b1ce02962b546dd.",
       "nextAction": "Use repo URL/commit in X walkthrough and Superteam submission."
     }
   },

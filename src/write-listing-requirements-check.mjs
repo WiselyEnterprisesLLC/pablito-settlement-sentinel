@@ -61,6 +61,8 @@ const publicRepoPublished = Boolean(publicSummary?.repositoryUrl);
 const categoryDecisionExists = fileExists('proof/category-route-decision.md');
 const sapRegistered = ['registered-live-identity-found', 'sap-identity-visible-in-explorer'].includes(sapIdentity?.status);
 const atomicRunCaptured = e2eLive?.ok === true;
+const xPostUrl = process.env.X_POST_URL || '';
+const xPostPublished = /^https:\/\/x\.com\/Pablito_WE\/status\/\d+$/i.test(xPostUrl);
 
 const commonRequirements = {
   listingOpen: status(
@@ -78,9 +80,11 @@ const commonRequirements = {
     publicRepoPublished ? 'Use repo URL/commit in X walkthrough and Superteam submission.' : 'Publish the scoped export only after explicit approval; then fill final repo URL and commit hash.',
   ),
   xSubmissionPost: status(
-    'missing-public-post',
-    fileExists('proof/x-walkthrough-draft.md') ? 'X walkthrough draft exists, but no public post has been made.' : 'No X walkthrough draft found.',
-    'After public repo exists, approve and post walkthrough tagging @OOBEonSol and @AceDataCloud.',
+    xPostPublished ? 'posted' : 'missing-public-post',
+    xPostPublished
+      ? `X walkthrough post is live: ${xPostUrl}.`
+      : fileExists('proof/x-walkthrough-draft.md') ? 'X walkthrough draft exists, but no public post has been made.' : 'No X walkthrough draft found.',
+    xPostPublished ? 'Use the X post URL in the Superteam submission.' : 'After public repo exists, approve and post walkthrough tagging @OOBEonSol and @AceDataCloud.',
   ),
   demoWalkthrough: status(
     'draft-ready-needs-public-link',

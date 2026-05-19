@@ -1,6 +1,6 @@
 # X Walkthrough Draft
 
-Status: draft only. Do not post until the public repo is reviewed and Paul approves the exact public text.
+Status: posted at https://x.com/Pablito_WE/status/2056873797232591067
 
 ## Strong Thread Draft
 
