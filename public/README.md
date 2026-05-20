@@ -1,8 +1,8 @@
 # Pablito Settlement Sentinel
 
-Public README draft for the OOBE x Ace Data Cloud autonomous agent bounty.
+Public README for the OOBE x Ace Data Cloud autonomous agent bounty.
 
-> Status: **scaffold plus partial live Ace proof**. This repo does not yet claim live SAP registration, full SAP settlement, Synapse Sentinel usage, reward/payment, escrow funding, or a completed Superteam submission.
+> Status: **public-safe submitted/reviewer packet plus live Ace/x402 evidence**. This repo does not claim sponsor acceptance, prize award, full SAP escrow ranking, or private OpenClaw/Pablito capabilities.
 
 ## What this is
 
@@ -14,20 +14,32 @@ Pablito Settlement Sentinel is a small autonomous workflow-payment demo. It show
 4. produce a bounded deliverable, and
 5. attach an x402/SAP-style settlement proof object.
 
-The local implementation stays deterministic so reviewers can inspect the architecture before broader wallet, account, public repo, or live payment actions are attempted. Separate public-safe proof files now record limited live Ace evidence that has already been captured.
+The local implementation stays deterministic so reviewers can inspect the architecture without exposing private keys or private agent memory. Separate public-safe proof files now record live Ace/x402 evidence that has already been captured.
 
 ## What is live vs mocked
 
 | Area | Current state |
 | --- | --- |
-| SAP agent registration | Draft arguments only; no mainnet registration |
+| SAP agent registration | Readiness/status artifacts; do not treat as prize acceptance |
 | Service discovery | Local SAP-shaped fixture |
-| Ace Data Cloud usage | Live public-safe summaries exist for OpenAI, Gemini, and SERP; local demo still uses a mocked classifier |
-| x402/SAP payment | One approved Ace x402 payment artifact exists; full SAP settlement is still not proven |
+| Ace Data Cloud usage | Live public-safe summaries exist across enabled service families; local demo stays deterministic |
+| x402/SAP payment | Three Ace/x402 on-chain proof artifacts exist; full SAP escrow ranking/prize result is not claimed |
 | Wallet signing | None in the local dry-run/test path |
-| Public posting/submission | None |
+| Public posting/submission | Public submission/posting handled separately; this repo is the public-safe proof package |
 
-See `proof/settlement-evidence-bundle.latest.json` for the public-safe evidence summary tying the approved Ace x402 artifact to the Ace service proof files.
+See `proof/settlement-evidence-bundle.latest.json` for the public-safe evidence summary tying the Ace x402 artifacts to the Ace service proof files.
+
+## Hosted x402 AI/API Router
+
+The broader public product is the x402 Crypto Pay-As-You-Go AI API Router:
+
+```text
+https://payments.wiselyenterprisesllc.com/ai
+```
+
+It lets agents discover services, quote payment, buy/top up developer credit, invoke hosted AI/data/media services, stream progress, store receipts, and quote external x402 payment-required sellers without exposing keys.
+
+See `../docs/X402_CRYPTO_PAYG_AI_ROUTER_USER_GUIDE.md` for the plain-English setup flow.
 
 ## Why this exists
 
@@ -70,17 +82,14 @@ npm run verify:prep
 
 This writes public-safe metadata/x402 drafts, the completion-gap JSON file, and the settlement evidence bundle.
 
-## What proof is still required before bounty submission
+## Remaining Proof Caveats
 
-A submission should not be presented as complete until the live route is confirmed and evidence exists for whichever category is pursued:
+Do not present this repo as sponsor-accepted or prize-awarded unless that happens separately. Remaining caveats:
 
-- confirmed submission route: agent API or normal Superteam public listing,
-- SAP registration path and any cost/rent/stake requirements,
-- real non-wash service usage,
-- real x402/SAP settlement proof if required beyond the current Ace artifact,
-- public repo URL with placeholders replaced,
-- public X/demo post only if approved and accurate,
-- final Superteam submission through the confirmed route.
+- bounty operator ranking/acceptance is external
+- SAP/Synapse interpretation is controlled by the bounty operators
+- no artificial/wash payment volume should be created
+- quote/handoff crypto routes need the caller's own wallet/exchange executor before they are real payments
 
 ## Current diligence questions
 
@@ -88,4 +97,4 @@ See `proof/questions-for-sponsor.md` for the sponsor/Superteam questions that ne
 
 ## License
 
-Draft/internal until a public repository is intentionally created and reviewed.
+Public-safe bounty/demo package.

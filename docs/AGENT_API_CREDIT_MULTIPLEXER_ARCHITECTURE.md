@@ -10,14 +10,14 @@ The customer is an agent developer or operator. Their bot should not stop mid-ru
 
 ## Public Product
 
-Public name: **Pablito Safe AI Invocation Layer**
+Public name: **x402 Crypto Pay-As-You-Go AI API Router**
 
 Public promise:
 
 - install one skill
 - discover hosted AI/data services
 - quote a call
-- pay per call with x402, or use a developer credit balance
+- pay per call with x402, or use a developer-credit key
 - stream progress so the agent does not look hung
 - return a deterministic receipt the agent can log and reason over
 
@@ -55,17 +55,19 @@ Flow:
 
 ### 2. Developer Credit Balance
 
-Status: implemented as admin-created V1 ledger.
+Status: live path.
 
 Flow:
 
-1. Wisely admin creates a developer account with `/ai/credits/create`.
-2. Developer receives a one-time `pablito_dev_*` key.
-3. Developer stores the key in their agent secret store.
-4. Agent checks `/ai/credits/status`.
-5. Agent calls `/ai/invoke` with `X-Developer-Key` or bearer token.
-6. Server hard-checks balance before the provider call.
-7. Server debits only after a successful hosted call and records a ledger receipt.
+1. Buyer calls `/ai/credits/purchase` for a small amount such as `$5`.
+2. Endpoint returns x402 payment requirements.
+3. Buyer signs/pays through its wallet/x402 runtime.
+4. Endpoint returns a one-time `pablito_dev_*` key.
+5. Buyer stores the key in their agent secret store.
+6. Agent checks `/ai/credits/status`.
+7. Agent calls `/ai/invoke` with `X-Developer-Key` or bearer token.
+8. Server hard-checks balance before the provider call.
+9. Server debits only after a successful hosted call and records a ledger receipt.
 
 Current ledger storage:
 
@@ -78,9 +80,15 @@ Security:
 - admin creation/adjustment requires `PABLITO_MULTIPLEXER_ADMIN_TOKEN`
 - no wallet signing secrets, provider keys, raw cards, or passwords are accepted
 
+## Live Proof Status
+
+- Base USDC -> x402 developer-credit purchase: proven live.
+- Base ETH -> USDC -> x402 developer-credit purchase: proven live.
+- x402-funded developer key -> paid AI invoke with receipt: proven live.
+- DOGE, NEAR, XRP, SOL, BONK, PEPE, and similar routes: quote/handoff until the caller's exchange, bridge, or wallet executor signs and executes the route.
+
 ## Planned Modes
 
-- x402 top-up to developer credit balance
 - tenant limits and per-agent budgets
 - low-balance webhooks/alerts
 - provider failover policy
