@@ -65,7 +65,7 @@ The public skill is a thin client:
 - Buyers do not need Paul/Wisely Ace API keys.
 - Buyers use the hosted Wisely endpoint for quote, service catalog, progress events, receipt capture, and attribution.
 - Buyers need their own x402-capable wallet/client with funds in the required settlement route.
-- If a buyer forks the package and calls Ace directly with their own token, that may be useful to them but likely will not count as Wisely/Pablito hosted usage or bounty volume.
+- If a buyer forks the package and calls Ace directly with their own token, that may be useful to them but likely will not count as Wisely hosted usage or bounty volume.
 
 ## Evidence Locations
 
@@ -73,4 +73,3 @@ The public skill is a thin client:
 - Hosted manifest: `https://payments.wiselyenterprisesllc.com/ace/manifest`
 - Live service proof archives: `proof/ace-service-proof.*.json`
 - Latest x402 preflight/blocker: `proof/ace-x402-live-payment.latest.json`
-

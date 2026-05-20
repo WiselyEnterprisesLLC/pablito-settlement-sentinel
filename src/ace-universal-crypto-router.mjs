@@ -33,7 +33,7 @@ const REQUIRED_SETTLEMENT_OPTIONS = [
 ];
 
 const HOSTED_MARGIN_BPS = 100;
-const HOSTED_MARGIN_FLOOR_USD = 0.05;
+const HOSTED_MARGIN_FLOOR_USD = 0;
 
 const ROUTE_TEMPLATES = [
   {
@@ -123,7 +123,7 @@ function hostedMarginEstimate(amountUsd) {
   const base = Number(amountUsd || 0);
   const marginUsd = HOSTED_MARGIN_FLOOR_USD + (base * HOSTED_MARGIN_BPS) / 10000;
   return {
-    label: 'Wisely/Pablito hosted infrastructure margin',
+    label: 'Wisely hosted infrastructure margin',
     basisPoints: HOSTED_MARGIN_BPS,
     baseAmountUsd: Number(base.toFixed(6)),
     estimatedMarginUsd: Number(marginUsd.toFixed(6)),
@@ -208,14 +208,23 @@ export function buildUniversalCryptoAceQuote({
 
 export function buildUniversalRouterManifest() {
   return {
-    name: 'Wisely Universal Crypto AI Payment Router',
+    name: 'x402 Agent-Payment Infrastructure',
     version: '0.1.0',
-    purpose: 'Let a user pay for hosted AI services with the crypto they already have by quoting conversion paths into the required settlement asset.',
+    purpose: 'Provide an x402/developer-credit control layer for paid AI/data tool calls, receipts, and agent spend governance.',
     pricingPresentation: {
       publicRule: 'Show all-in service price, route/network estimate, and total debit. Keep provider-cost formulas and model routing internal.',
-      internalMarginBasisPoints: HOSTED_MARGIN_BPS,
-      internalMarginFloorUsd: HOSTED_MARGIN_FLOOR_USD,
     },
+    publicMcp: {
+      manifest: 'https://payments.wiselyenterprisesllc.com/ai/mcp/manifest',
+      endpoint: 'https://payments.wiselyenterprisesllc.com/ai/mcp',
+      transport: 'streamable-http-json-rpc',
+    },
+    liveGovernance: [
+      'Payment binding hash ties service id, payload hash, amount, asset, network, merchant address, expiry, nonce, idempotency key, and payment-requirements hash.',
+      'Idempotency keys protect exact retries and reject conflicting replays.',
+      'Max-call price guard and per-tenant daily usage tracking are live in the hosted endpoint.',
+      'Receipts include public-safe proof fields without exposing secrets or provider credentials.',
+    ],
     requiredSettlementOptions: REQUIRED_SETTLEMENT_OPTIONS,
     supportedRouteClasses: ROUTE_TEMPLATES.map((route) => ({
       id: route.id,

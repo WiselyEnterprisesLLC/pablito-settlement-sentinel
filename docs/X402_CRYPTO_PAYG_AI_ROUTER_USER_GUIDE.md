@@ -1,6 +1,6 @@
-# x402 Crypto Pay-As-You-Go AI API Router
+# x402 Agent-Payment Infrastructure
 
-This is the novice-friendly public guide for the hosted Wisely/Pablito router.
+This is the novice-friendly public guide for the hosted Wisely x402 agent-payment infrastructure.
 
 The simple version:
 
@@ -68,7 +68,7 @@ Public transaction proof captured during live tests:
 Copy this into your agent:
 
 ```text
-You have the x402 Crypto Pay-As-You-Go AI API Router.
+You have the x402 Agent-Payment Infrastructure.
 
 Use this base URL:
 https://payments.wiselyenterprisesllc.com/ai

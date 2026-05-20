@@ -31,7 +31,7 @@ See `proof/settlement-evidence-bundle.latest.json` for the public-safe evidence 
 
 ## Hosted x402 AI/API Router
 
-The broader public product is the x402 Crypto Pay-As-You-Go AI API Router:
+The broader public product is x402 Agent-Payment Infrastructure:
 
 ```text
 https://payments.wiselyenterprisesllc.com/ai

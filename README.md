@@ -10,7 +10,7 @@ This is a scoped bounty package for **Pablito Settlement Sentinel** only. It is 
 
 Current live evidence includes public-safe Ace API usage summaries, three Ace/x402 on-chain proof artifacts, SAP identity/readiness files, a public proof page, and the public submission packet. It still does not claim full SAP escrow ranking, sponsor acceptance, prize award, or unrelated OpenClaw/Pablito capabilities.
 
-## x402 Crypto Pay-As-You-Go AI API Router
+## x402 Agent-Payment Infrastructure
 
 This repo also documents the public-facing router/skill that grew out of the bounty work:
 

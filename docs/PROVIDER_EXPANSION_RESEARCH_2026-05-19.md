@@ -2,7 +2,7 @@
 
 ## Product Rule
 
-Pablito Safe AI Invocation Layer is provider-neutral, but every public paid connector must meet the x402 customer-boundary standard:
+x402 Agent-Payment Infrastructure is provider-neutral, but every public paid connector must meet the x402 customer-boundary standard:
 
 1. Caller discovers service metadata.
 2. Caller requests a quote.
@@ -11,7 +11,7 @@ Pablito Safe AI Invocation Layer is provider-neutral, but every public paid conn
 5. Hosted adapter invokes the upstream provider.
 6. Endpoint returns progress, result summary, and receipt/proof.
 
-If the upstream provider supports x402/SAP natively, prefer that route. If the upstream only supports API keys/credits, Wisely/Pablito is the x402 seller and wraps the upstream call server-side.
+If the upstream provider supports x402/SAP natively, prefer that route. If the upstream only supports API keys/credits, Wisely is the x402 seller and wraps the upstream call server-side.
 
 ## Current Live Lane
 

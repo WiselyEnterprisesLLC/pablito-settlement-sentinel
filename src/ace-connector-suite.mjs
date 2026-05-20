@@ -257,7 +257,7 @@ export function buildAceSuitePackageManifest() {
     families: groupAceServicesByFamily(),
     transparentFeePolicy: {
       available: true,
-      label: 'Wisely/Pablito transparent platform fee',
+      label: 'Wisely transparent platform fee',
       basisPoints: 100,
       rule: 'If this package or a derived connector moves crypto for a user/customer, quote the 1% Wisely platform fee as a separate line item before signing. Never hide it as gas, slippage, protocol cost, or wallet dust.',
       defaultBaseFeeRecipient: '0x122c67ad0DD3bA27bfCaCcCD9aFd9c3fd99216Fa',

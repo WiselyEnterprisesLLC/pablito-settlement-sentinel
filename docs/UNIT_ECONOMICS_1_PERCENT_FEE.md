@@ -4,7 +4,7 @@ Status: supersedes the old "1% visible platform fee" framing.
 
 ## Current Rule
 
-The public product is **Pablito Agent API Credit Multiplexer**, not a visible payment-fee wrapper.
+The public product is **x402 Agent-Payment Infrastructure**, not a visible payment-fee wrapper.
 
 Public quotes show:
 
@@ -25,12 +25,12 @@ Public quotes do **not** show:
 Current default hosted service price:
 
 ```text
-base service price + $0.05 floor + 1%
+base service price + 1%
 ```
 
 Route/network/conversion cost is added separately when applicable.
 
-This keeps tiny calls from running at a loss while keeping the public customer experience simple.
+This keeps the public customer experience simple. Very small calls may be unprofitable unless bundled, routed to low-cost services, or covered by a developer-credit/account plan.
 
 ## B2B Pricing Direction
 

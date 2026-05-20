@@ -1,8 +1,8 @@
-# Marketplace Copy: x402 Crypto Pay-As-You-Go AI API Router
+# Marketplace Copy: x402 Agent-Payment Infrastructure
 
 ## Product Name
 
-x402 Crypto Pay-As-You-Go AI API Router
+x402 Agent-Payment Infrastructure
 
 ## Tagline
 
@@ -16,13 +16,13 @@ Install this free skill so your autonomous agent can route hosted AI/data/genera
 
 Autonomous agents should not stop mid-run because one provider balance ran dry or a credit-card refill screen appeared.
 
-x402 Crypto Pay-As-You-Go AI API Router gives the agent a hosted service catalog, live quote flow, x402 payment path, developer-credit easy mode, progress stream, and receipt-backed output summary. Live mode supports per-call x402 with Ace Data Cloud as the first upstream and bounty lane. The easiest user path is a reusable developer-credit key: the user funds a small balance once, the agent stores the key securely, and future calls use `X-Developer-Key`.
+x402 Agent-Payment Infrastructure gives the agent a hosted service catalog, live quote flow, x402 payment path, developer-credit easy mode, progress stream, spend controls, and receipt-backed output summary. Live mode supports per-call x402 with Ace Data Cloud as the first upstream and bounty lane. The easiest user path is a reusable developer-credit key: the user funds a small balance once, the agent stores the key securely, and future calls use `X-Developer-Key`.
 
 The product is not Ace-only. The public payment standard remains x402 while upstream providers can be native x402/SAP services or server-side adapters for documented APIs such as Higgsfield, Meshy, Runway, Luma, fal, Replicate, BFL/FLUX, ElevenLabs, HeyGen, and Tavus.
 
 The public quote shows the selected service, payment asset/network, estimated route/network cost, and total debit. Internal provider cost, model routing, and Wisely margin formulas are intentionally not exposed as customer-facing line items.
 
-The package is intentionally a thin client. Hosted routing keeps usage, receipts, and measurement tied to Wisely/Pablito. A purely local fork may still be useful, but it will not create Wisely/Pablito hosted usage or payment volume.
+The package is intentionally a thin client. Hosted routing keeps usage, receipts, and measurement tied to Wisely. A purely local fork may still be useful, but it will not create Wisely hosted usage or payment volume.
 
 Plain-English pitch:
 
@@ -47,7 +47,7 @@ Got old coins, awkward memecoins, or shitcoins sitting around in wallets? This s
 Tell your agent:
 
 ```text
-You have the x402 Crypto Pay-As-You-Go AI API Router.
+You have the x402 Agent-Payment Infrastructure.
 
 Use this base URL:
 https://payments.wiselyenterprisesllc.com/ai
@@ -90,7 +90,7 @@ Public pricing is simple:
 - estimated route/network/conversion cost, when applicable
 - total debit before signing
 
-Wisely/Pablito may route across providers and internal models to fulfill the service. The customer does not need that breakdown to approve the payment.
+Wisely may route across providers and internal models to fulfill the service. The customer does not need that breakdown to approve the payment.
 
 For developers, position this as infrastructure convenience: one balance/rail, many services, receipts, progress streaming, and fewer provider accounts to babysit. The ClawMart skill is free; hosted usage is paid by quoted x402/developer-credit calls.
 
@@ -107,7 +107,7 @@ For developers, position this as infrastructure convenience: one balance/rail, m
 
 Agents should not stall because a provider balance ran dry.
 
-I built x402 Crypto Pay-As-You-Go AI API Router: install the skill, ask for an AI/data/media service, quote the x402 rail, stream status, return the result, and keep the receipt.
+I built x402 Agent-Payment Infrastructure: install the skill, ask for an AI/data/media service, quote the x402 rail, stream status, return the result, and keep the receipt.
 
 One rail. Many calls. Less babysitting the token jars.
 
@@ -118,7 +118,7 @@ No recovery-word handling. No raw cards. No provider keys in your agent.
 - ClawMart listing
 - MonetizeYourAgent directory
 - MYA jobs/swarms where x402/agent-payment work is relevant
-- X post/thread from Pablito
+- X post/thread from the launch account
 - GitHub public repo/readme after redaction scan
 - Smithery/MCP directories after MCP wrapper exists
 - Skills marketplaces after package polish

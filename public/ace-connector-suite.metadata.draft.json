@@ -11,7 +11,7 @@
   ],
   "universalCryptoPaymentRouter": {
     "status": "dry-run-modeled-live-adapters-needed",
-    "purpose": "Let a user pay for Ace AI services with the crypto they already have by quoting conversion paths into the Ace-required settlement asset.",
+    "purpose": "Provide an x402/developer-credit control layer for paid AI/data tool calls, receipts, and agent spend governance.",
     "requiredSettlementOptions": [
       {
         "id": "ace-x402-base-usdc",
@@ -20,7 +20,7 @@
         "asset": "USDC",
         "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
         "priority": 1,
-        "note": "Ace x402 documented route: Base USDC payment envelope."
+        "note": "Hosted x402 settlement route: Base USDC payment envelope."
       },
       {
         "id": "sap-solana-usdc",
@@ -50,7 +50,7 @@
       "cross-chain-aggregator"
     ],
     "liveAdaptersNeeded": [
-      "Ace payment-required parser to read exact required network/asset/amount",
+      "Payment-required parser to read exact required network/asset/amount",
       "DEX quotes: Jupiter for Solana, 0x/1inch/Uniswap or equivalent for EVM",
       "Bridge quotes: Socket/LiFi/Wormhole/official bridge adapter where available",
       "CEX quotes/withdraw estimate: Coinbase/Kraken only if user explicitly uses an exchange account",

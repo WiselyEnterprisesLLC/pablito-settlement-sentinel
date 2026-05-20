@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T07:40:27.898Z",
+  "generatedAt": "2026-05-20T06:09:47.345Z",
   "status": "connector-suite-dry-run-ready-live-usage-missing",
   "warning": "This proves the connector suite architecture and package coverage only. It does not claim live Ace usage, live SAP registration, x402 settlement, public posting, or bounty submission.",
   "suiteName": "Ace Data Cloud x402 Connector Suite",
@@ -78,14 +78,23 @@
   },
   "universalCryptoPaymentRouter": {
     "manifest": {
-      "name": "Ace Universal Crypto Payment Router",
+      "name": "x402 Agent-Payment Infrastructure",
       "version": "0.1.0",
-      "purpose": "Let a user pay for Ace AI services with the crypto they already have by quoting conversion paths into the Ace-required settlement asset.",
-      "platformFee": {
-        "label": "Wisely/Pablito transparent platform fee",
-        "basisPoints": 100,
-        "rule": "1% of the service/payment amount, disclosed before signing, never hidden as gas."
+      "purpose": "Provide an x402/developer-credit control layer for paid AI/data tool calls, receipts, and agent spend governance.",
+      "pricingPresentation": {
+        "publicRule": "Show all-in service price, route/network estimate, and total debit. Keep provider-cost formulas and model routing internal."
       },
+      "publicMcp": {
+        "manifest": "https://payments.wiselyenterprisesllc.com/ai/mcp/manifest",
+        "endpoint": "https://payments.wiselyenterprisesllc.com/ai/mcp",
+        "transport": "streamable-http-json-rpc"
+      },
+      "liveGovernance": [
+        "Payment binding hash ties service id, payload hash, amount, asset, network, merchant address, expiry, nonce, idempotency key, and payment-requirements hash.",
+        "Idempotency keys protect exact retries and reject conflicting replays.",
+        "Max-call price guard and per-tenant daily usage tracking are live in the hosted endpoint.",
+        "Receipts include public-safe proof fields without exposing secrets or provider credentials."
+      ],
       "requiredSettlementOptions": [
         {
           "id": "ace-x402-base-usdc",
@@ -94,7 +103,7 @@
           "asset": "USDC",
           "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
           "priority": 1,
-          "note": "Ace x402 documented route: Base USDC payment envelope."
+          "note": "Hosted x402 settlement route: Base USDC payment envelope."
         },
         {
           "id": "sap-solana-usdc",
@@ -121,9 +130,9 @@
           "kind": "native",
           "custodyRisk": "none",
           "speed": "fastest",
-          "userAction": "User signs the Ace payment only.",
+          "userAction": "User signs the hosted service payment only.",
           "steps": [
-            "pay Ace-required settlement asset directly"
+            "pay the required hosted-service settlement asset directly"
           ]
         },
         {
@@ -131,11 +140,11 @@
           "kind": "dex",
           "custodyRisk": "none",
           "speed": "fast",
-          "userAction": "User signs swap, then signs Ace payment.",
+          "userAction": "User signs swap, then signs hosted service payment.",
           "steps": [
             "quote same-chain DEX swap",
             "swap into required asset",
-            "pay Ace settlement"
+            "pay hosted service settlement"
           ]
         },
         {
@@ -147,7 +156,7 @@
           "steps": [
             "quote Jupiter route to Solana USDC if needed",
             "bridge USDC to Base",
-            "pay Ace x402 Base USDC"
+            "pay hosted x402 Base USDC"
           ]
         },
         {
@@ -158,7 +167,7 @@
           "userAction": "User signs Base swap and x402 payment.",
           "steps": [
             "quote Base DEX route into USDC",
-            "pay Ace x402 Base USDC"
+            "pay hosted x402 Base USDC"
           ]
         },
         {
@@ -170,7 +179,7 @@
           "steps": [
             "quote Coinbase/Kraken conversion to required asset",
             "withdraw to required network/address",
-            "pay Ace settlement"
+            "pay hosted service settlement"
           ]
         },
         {
@@ -178,16 +187,16 @@
           "kind": "aggregator",
           "custodyRisk": "bridge",
           "speed": "medium",
-          "userAction": "User signs aggregator route and then Ace payment.",
+          "userAction": "User signs aggregator route and then hosted service payment.",
           "steps": [
             "quote cross-chain aggregator",
             "bridge/swap into required asset",
-            "pay Ace settlement"
+            "pay hosted service settlement"
           ]
         }
       ],
       "liveAdaptersNeeded": [
-        "Ace payment-required parser to read exact required network/asset/amount",
+        "Payment-required parser to read exact required network/asset/amount",
         "DEX quotes: Jupiter for Solana, 0x/1inch/Uniswap or equivalent for EVM",
         "Bridge quotes: Socket/LiFi/Wormhole/official bridge adapter where available",
         "CEX quotes/withdraw estimate: Coinbase/Kraken only if user explicitly uses an exchange account",
@@ -195,10 +204,10 @@
       ],
       "hardRules": [
         "No wallet signing secrets, recovery words, exchange passwords, raw cards, or bank credentials.",
-        "No hidden fee. Platform fee must be a separate line item before signing.",
+        "No hidden protocol cost. Public customers must see service selected, payment asset/network, estimated route/network cost, and total debit before signing.",
         "Never present artificial circular volume as bounty-valid usage.",
         "Prefer non-custodial same-chain routes, then bridge routes, then exchange routes.",
-        "Every live route must check balance, quote expiry, slippage, destination, and final Ace payment amount."
+        "Every live route must check balance, quote expiry, slippage, destination, and final hosted payment amount."
       ]
     },
     "dryRunQuotes": [
@@ -227,20 +236,20 @@
             "asset": "USDC",
             "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
             "priority": 1,
-            "note": "Ace x402 documented route: Base USDC payment envelope."
+            "note": "Hosted x402 settlement route: Base USDC payment envelope."
           },
           "kind": "native",
           "steps": [
-            "pay Ace-required settlement asset directly"
+            "pay the required hosted-service settlement asset directly"
           ],
           "estimatedCostUsd": 0,
-          "estimatedPlatformFeeUsd": 0.0133,
+          "estimatedHostedMarginUsd": 0.0133,
           "estimatedTotalUserCostUsd": 1.3433,
           "variableBps": 0,
           "fixedUsd": 0,
           "custodyRisk": "none",
           "speed": "fastest",
-          "userAction": "User signs the Ace payment only.",
+          "userAction": "User signs the hosted service payment only.",
           "score": 0.01
         },
         "alternatives": [
@@ -259,15 +268,15 @@
               "asset": "USDC",
               "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
               "priority": 1,
-              "note": "Ace x402 documented route: Base USDC payment envelope."
+              "note": "Hosted x402 settlement route: Base USDC payment envelope."
             },
             "kind": "dex_x402",
             "steps": [
               "quote Base DEX route into USDC",
-              "pay Ace x402 Base USDC"
+              "pay hosted x402 Base USDC"
             ],
             "estimatedCostUsd": 0.023325,
-            "estimatedPlatformFeeUsd": 0.0133,
+            "estimatedHostedMarginUsd": 0.0133,
             "estimatedTotalUserCostUsd": 1.366625,
             "variableBps": 25,
             "fixedUsd": 0.02,
@@ -297,16 +306,16 @@
             "steps": [
               "quote cross-chain aggregator",
               "bridge/swap into required asset",
-              "pay Ace settlement"
+              "pay hosted service settlement"
             ],
             "estimatedCostUsd": 0.21862,
-            "estimatedPlatformFeeUsd": 0.0133,
+            "estimatedHostedMarginUsd": 0.0133,
             "estimatedTotalUserCostUsd": 1.56192,
             "variableBps": 140,
             "fixedUsd": 0.2,
             "custodyRisk": "bridge",
             "speed": "medium",
-            "userAction": "User signs aggregator route and then Ace payment.",
+            "userAction": "User signs aggregator route and then hosted service payment.",
             "score": 0.58862
           },
           {
@@ -330,28 +339,20 @@
             "steps": [
               "quote cross-chain aggregator",
               "bridge/swap into required asset",
-              "pay Ace settlement"
+              "pay hosted service settlement"
             ],
             "estimatedCostUsd": 0.21862,
-            "estimatedPlatformFeeUsd": 0.0133,
+            "estimatedHostedMarginUsd": 0.0133,
             "estimatedTotalUserCostUsd": 1.56192,
             "variableBps": 140,
             "fixedUsd": 0.2,
             "custodyRisk": "bridge",
             "speed": "medium",
-            "userAction": "User signs aggregator route and then Ace payment.",
+            "userAction": "User signs aggregator route and then hosted service payment.",
             "score": 0.59862
           }
         ],
         "allCandidateCount": 4,
-        "platformFee": {
-          "label": "Wisely/Pablito transparent platform fee",
-          "basisPoints": 100,
-          "baseAmountUsd": 1.33,
-          "estimatedFeeUsd": 0.0133,
-          "rule": "Fee is 1% of the service/payment amount and must be shown as a separate line item before signing.",
-          "hideAsGas": false
-        },
         "executionBoundary": {
           "agentCustody": false,
           "walletSigningSecretsHandled": false,
@@ -360,13 +361,6 @@
           "userMustSignOrAuthorizeConversion": true,
           "quoteMustExpire": true,
           "suggestedQuoteTtlSeconds": 60
-        },
-        "feeDisclosureRule": {
-          "platformFeeAllowed": true,
-          "platformFeeBasisPoints": 100,
-          "mustBeSeparateLineItem": true,
-          "neverDisguiseAsGas": true,
-          "includeInTotalDebitBeforeSigning": true
         }
       },
       {
@@ -398,16 +392,16 @@
           },
           "kind": "native",
           "steps": [
-            "pay Ace-required settlement asset directly"
+            "pay the required hosted-service settlement asset directly"
           ],
           "estimatedCostUsd": 0,
-          "estimatedPlatformFeeUsd": 0.0133,
+          "estimatedHostedMarginUsd": 0.0133,
           "estimatedTotalUserCostUsd": 1.3433,
           "variableBps": 0,
           "fixedUsd": 0,
           "custodyRisk": "none",
           "speed": "fastest",
-          "userAction": "User signs the Ace payment only.",
+          "userAction": "User signs the hosted service payment only.",
           "score": 0.03
         },
         "alternatives": [
@@ -432,16 +426,16 @@
             "steps": [
               "quote same-chain DEX swap",
               "swap into required asset",
-              "pay Ace settlement"
+              "pay hosted service settlement"
             ],
             "estimatedCostUsd": 0.034655,
-            "estimatedPlatformFeeUsd": 0.0133,
+            "estimatedHostedMarginUsd": 0.0133,
             "estimatedTotalUserCostUsd": 1.377955,
             "variableBps": 35,
             "fixedUsd": 0.03,
             "custodyRisk": "none",
             "speed": "fast",
-            "userAction": "User signs swap, then signs Ace payment.",
+            "userAction": "User signs swap, then signs hosted service payment.",
             "score": 0.104655
           },
           {
@@ -459,16 +453,16 @@
               "asset": "USDC",
               "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
               "priority": 1,
-              "note": "Ace x402 documented route: Base USDC payment envelope."
+              "note": "Hosted x402 settlement route: Base USDC payment envelope."
             },
             "kind": "swap_bridge",
             "steps": [
               "quote Jupiter route to Solana USDC if needed",
               "bridge USDC to Base",
-              "pay Ace x402 Base USDC"
+              "pay hosted x402 Base USDC"
             ],
             "estimatedCostUsd": 0.162635,
-            "estimatedPlatformFeeUsd": 0.0133,
+            "estimatedHostedMarginUsd": 0.0133,
             "estimatedTotalUserCostUsd": 1.505935,
             "variableBps": 95,
             "fixedUsd": 0.15,
@@ -492,34 +486,26 @@
               "asset": "USDC",
               "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
               "priority": 1,
-              "note": "Ace x402 documented route: Base USDC payment envelope."
+              "note": "Hosted x402 settlement route: Base USDC payment envelope."
             },
             "kind": "aggregator",
             "steps": [
               "quote cross-chain aggregator",
               "bridge/swap into required asset",
-              "pay Ace settlement"
+              "pay hosted service settlement"
             ],
             "estimatedCostUsd": 0.21862,
-            "estimatedPlatformFeeUsd": 0.0133,
+            "estimatedHostedMarginUsd": 0.0133,
             "estimatedTotalUserCostUsd": 1.56192,
             "variableBps": 140,
             "fixedUsd": 0.2,
             "custodyRisk": "bridge",
             "speed": "medium",
-            "userAction": "User signs aggregator route and then Ace payment.",
+            "userAction": "User signs aggregator route and then hosted service payment.",
             "score": 0.57862
           }
         ],
         "allCandidateCount": 4,
-        "platformFee": {
-          "label": "Wisely/Pablito transparent platform fee",
-          "basisPoints": 100,
-          "baseAmountUsd": 1.33,
-          "estimatedFeeUsd": 0.0133,
-          "rule": "Fee is 1% of the service/payment amount and must be shown as a separate line item before signing.",
-          "hideAsGas": false
-        },
         "executionBoundary": {
           "agentCustody": false,
           "walletSigningSecretsHandled": false,
@@ -528,13 +514,6 @@
           "userMustSignOrAuthorizeConversion": true,
           "quoteMustExpire": true,
           "suggestedQuoteTtlSeconds": 60
-        },
-        "feeDisclosureRule": {
-          "platformFeeAllowed": true,
-          "platformFeeBasisPoints": 100,
-          "mustBeSeparateLineItem": true,
-          "neverDisguiseAsGas": true,
-          "includeInTotalDebitBeforeSigning": true
         }
       },
       {
@@ -562,16 +541,16 @@
             "asset": "USDC",
             "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
             "priority": 1,
-            "note": "Ace x402 documented route: Base USDC payment envelope."
+            "note": "Hosted x402 settlement route: Base USDC payment envelope."
           },
           "kind": "cex",
           "steps": [
             "quote Coinbase/Kraken conversion to required asset",
             "withdraw to required network/address",
-            "pay Ace settlement"
+            "pay hosted service settlement"
           ],
           "estimatedCostUsd": 0.51596,
-          "estimatedPlatformFeeUsd": 0.0133,
+          "estimatedHostedMarginUsd": 0.0133,
           "estimatedTotalUserCostUsd": 1.85926,
           "variableBps": 120,
           "fixedUsd": 0.5,
@@ -602,10 +581,10 @@
             "steps": [
               "quote Coinbase/Kraken conversion to required asset",
               "withdraw to required network/address",
-              "pay Ace settlement"
+              "pay hosted service settlement"
             ],
             "estimatedCostUsd": 0.51596,
-            "estimatedPlatformFeeUsd": 0.0133,
+            "estimatedHostedMarginUsd": 0.0133,
             "estimatedTotalUserCostUsd": 1.85926,
             "variableBps": 120,
             "fixedUsd": 0.5,
@@ -635,10 +614,10 @@
             "steps": [
               "quote Coinbase/Kraken conversion to required asset",
               "withdraw to required network/address",
-              "pay Ace settlement"
+              "pay hosted service settlement"
             ],
             "estimatedCostUsd": 0.51596,
-            "estimatedPlatformFeeUsd": 0.0133,
+            "estimatedHostedMarginUsd": 0.0133,
             "estimatedTotalUserCostUsd": 1.85926,
             "variableBps": 120,
             "fixedUsd": 0.5,
@@ -649,14 +628,6 @@
           }
         ],
         "allCandidateCount": 3,
-        "platformFee": {
-          "label": "Wisely/Pablito transparent platform fee",
-          "basisPoints": 100,
-          "baseAmountUsd": 1.33,
-          "estimatedFeeUsd": 0.0133,
-          "rule": "Fee is 1% of the service/payment amount and must be shown as a separate line item before signing.",
-          "hideAsGas": false
-        },
         "executionBoundary": {
           "agentCustody": false,
           "walletSigningSecretsHandled": false,
@@ -665,13 +636,6 @@
           "userMustSignOrAuthorizeConversion": true,
           "quoteMustExpire": true,
           "suggestedQuoteTtlSeconds": 60
-        },
-        "feeDisclosureRule": {
-          "platformFeeAllowed": true,
-          "platformFeeBasisPoints": 100,
-          "mustBeSeparateLineItem": true,
-          "neverDisguiseAsGas": true,
-          "includeInTotalDebitBeforeSigning": true
         }
       },
       {
@@ -699,15 +663,15 @@
             "asset": "USDC",
             "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
             "priority": 1,
-            "note": "Ace x402 documented route: Base USDC payment envelope."
+            "note": "Hosted x402 settlement route: Base USDC payment envelope."
           },
           "kind": "dex_x402",
           "steps": [
             "quote Base DEX route into USDC",
-            "pay Ace x402 Base USDC"
+            "pay hosted x402 Base USDC"
           ],
           "estimatedCostUsd": 0.023325,
-          "estimatedPlatformFeeUsd": 0.0133,
+          "estimatedHostedMarginUsd": 0.0133,
           "estimatedTotalUserCostUsd": 1.366625,
           "variableBps": 25,
           "fixedUsd": 0.02,
@@ -732,22 +696,22 @@
               "asset": "USDC",
               "tokenAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
               "priority": 1,
-              "note": "Ace x402 documented route: Base USDC payment envelope."
+              "note": "Hosted x402 settlement route: Base USDC payment envelope."
             },
             "kind": "dex",
             "steps": [
               "quote same-chain DEX swap",
               "swap into required asset",
-              "pay Ace settlement"
+              "pay hosted service settlement"
             ],
             "estimatedCostUsd": 0.034655,
-            "estimatedPlatformFeeUsd": 0.0133,
+            "estimatedHostedMarginUsd": 0.0133,
             "estimatedTotalUserCostUsd": 1.377955,
             "variableBps": 35,
             "fixedUsd": 0.03,
             "custodyRisk": "none",
             "speed": "fast",
-            "userAction": "User signs swap, then signs Ace payment.",
+            "userAction": "User signs swap, then signs hosted service payment.",
             "score": 0.094655
           },
           {
@@ -771,16 +735,16 @@
             "steps": [
               "quote cross-chain aggregator",
               "bridge/swap into required asset",
-              "pay Ace settlement"
+              "pay hosted service settlement"
             ],
             "estimatedCostUsd": 0.21862,
-            "estimatedPlatformFeeUsd": 0.0133,
+            "estimatedHostedMarginUsd": 0.0133,
             "estimatedTotalUserCostUsd": 1.56192,
             "variableBps": 140,
             "fixedUsd": 0.2,
             "custodyRisk": "bridge",
             "speed": "medium",
-            "userAction": "User signs aggregator route and then Ace payment.",
+            "userAction": "User signs aggregator route and then hosted service payment.",
             "score": 0.58862
           },
           {
@@ -804,28 +768,20 @@
             "steps": [
               "quote cross-chain aggregator",
               "bridge/swap into required asset",
-              "pay Ace settlement"
+              "pay hosted service settlement"
             ],
             "estimatedCostUsd": 0.21862,
-            "estimatedPlatformFeeUsd": 0.0133,
+            "estimatedHostedMarginUsd": 0.0133,
             "estimatedTotalUserCostUsd": 1.56192,
             "variableBps": 140,
             "fixedUsd": 0.2,
             "custodyRisk": "bridge",
             "speed": "medium",
-            "userAction": "User signs aggregator route and then Ace payment.",
+            "userAction": "User signs aggregator route and then hosted service payment.",
             "score": 0.59862
           }
         ],
         "allCandidateCount": 4,
-        "platformFee": {
-          "label": "Wisely/Pablito transparent platform fee",
-          "basisPoints": 100,
-          "baseAmountUsd": 1.33,
-          "estimatedFeeUsd": 0.0133,
-          "rule": "Fee is 1% of the service/payment amount and must be shown as a separate line item before signing.",
-          "hideAsGas": false
-        },
         "executionBoundary": {
           "agentCustody": false,
           "walletSigningSecretsHandled": false,
@@ -834,13 +790,6 @@
           "userMustSignOrAuthorizeConversion": true,
           "quoteMustExpire": true,
           "suggestedQuoteTtlSeconds": 60
-        },
-        "feeDisclosureRule": {
-          "platformFeeAllowed": true,
-          "platformFeeBasisPoints": 100,
-          "mustBeSeparateLineItem": true,
-          "neverDisguiseAsGas": true,
-          "includeInTotalDebitBeforeSigning": true
         }
       }
     ]

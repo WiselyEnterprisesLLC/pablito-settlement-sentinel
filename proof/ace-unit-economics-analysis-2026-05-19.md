@@ -9,7 +9,7 @@ Current hosted prices cover Ace variable cost for almost every enabled route usi
 ## Pricing Model In The Deployed Endpoint
 
 - Hosted payment amount is the full `hostedPriceUsd`, not just the 1% fee.
-- The visible 1% Wisely/Pablito platform fee exists in quote/disclosure logic, but `/ace/invoke` currently charges the resource price directly.
+- The visible 1% Wisely platform fee exists in quote/disclosure logic, but `/ace/invoke` currently charges the resource price directly.
 - If we only charged a 1% fee while paying Ace ourselves, the product would not be viable.
 - With the current hosted prices, it is viable on variable cost, except the noted embedding/unpriced routes.
 
@@ -70,7 +70,7 @@ Latest proof usage samples:
 There are two different upcharges:
 
 1. Ace vs underlying provider.
-2. Wisely/Pablito hosted price vs Ace variable cost.
+2. Wisely hosted price vs Ace variable cost.
 
 Findings:
 

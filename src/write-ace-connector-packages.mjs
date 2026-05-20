@@ -61,7 +61,7 @@ ${service.proofFields.map((field) => `- \`${field}\``).join('\n')}
 ${service.useCases.map((item) => `- ${item}`).join('\n')}
 
 ${service.safetyNote ? `## Safety Note\n\n${service.safetyNote}\n` : ''}
-${service.hostedInvokeAllowed === false ? `## Hosted Route Status\n\nThe hosted Wisely/Pablito route currently lists this connector for discovery/BYO-token mode only: ${service.hostedBlocker}\n\n` : ''}
+${service.hostedInvokeAllowed === false ? `## Hosted Route Status\n\nThe hosted Wisely route currently lists this connector for discovery/BYO-token mode only: ${service.hostedBlocker}\n\n` : ''}
 ## Live Gate
 
 Do not run a paid/live call until service token, cost cap, input privacy, and evidence path are approved. For bounty work, at least three distinct Ace services need real evidence before claiming Ace-category live usage.

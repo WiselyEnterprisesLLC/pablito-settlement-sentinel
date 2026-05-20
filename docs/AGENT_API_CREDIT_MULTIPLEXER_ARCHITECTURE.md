@@ -1,4 +1,4 @@
-# Pablito Safe AI Invocation Layer Architecture
+# x402 Agent-Payment Infrastructure Architecture
 
 ## Positioning
 
@@ -10,7 +10,7 @@ The customer is an agent developer or operator. Their bot should not stop mid-ru
 
 ## Public Product
 
-Public name: **x402 Crypto Pay-As-You-Go AI API Router**
+Public name: **x402 Agent-Payment Infrastructure**
 
 Public promise:
 
@@ -33,7 +33,7 @@ Do not publicly market this as direct provider resale. Do not expose internal pr
 Every public paid connector should satisfy the x402 customer-facing standard. Providers fall into two lanes:
 
 - **Native x402/SAP providers:** the upstream itself supports x402/SAP and can produce direct payment evidence. Ace Data Cloud is the first live upstream and OOBE/Ace bounty lane.
-- **x402-wrapped API providers:** the caller pays Wisely/Pablito through x402, then the hosted adapter calls the upstream with server-side provider credentials or credits. The caller never sees provider API keys or wallet signing secrets.
+- **x402-wrapped API providers:** the caller pays Wisely through x402, then the hosted adapter calls the upstream with server-side provider credentials or credits. The caller never sees provider API keys or wallet signing secrets.
 
 This means Higgsfield, Meshy, Runway, Luma, fal, Replicate, BFL/FLUX, ElevenLabs, HeyGen, Tavus, and similar providers can be added without changing the payment surface, as long as the provider has a documented API and compatible terms.
 
@@ -171,6 +171,6 @@ This avoids silent behavior changes while still making the next action obvious t
 
 ## Bounty Accounting
 
-Hosted usage and receipts remain attributable to Wisely/Pablito. Local-only forks may help a buyer, but they do not create Wisely/Pablito hosted usage, payment volume, or receipts.
+Hosted usage and receipts remain attributable to Wisely. Local-only forks may help a buyer, but they do not create Wisely hosted usage, payment volume, or receipts.
 
 Internal proof may mention Ace/SAP/x402 where needed for the bounty. Public product copy should emphasize agent uptime, unified API access, progress streaming, and receipts.
